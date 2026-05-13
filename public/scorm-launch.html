@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Introduction to Block-Based Coding — SCORM Module</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 100%; height: 100%; background: #0f0f0f; }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+  </style>
+  <script>
+    /* SCORM 1.2 API Stub — allows the module to run without a real LMS */
+    var _store = {};
+    window.API = {
+      LMSInitialize: function() { return "true"; },
+      LMSFinish: function() { return "true"; },
+      LMSGetValue: function(key) { return _store[key] || ""; },
+      LMSSetValue: function(key, val) { _store[key] = val; return "true"; },
+      LMSCommit: function() { return "true"; },
+      LMSGetLastError: function() { return "0"; },
+      LMSGetErrorString: function() { return "No error"; },
+      LMSGetDiagnostic: function() { return ""; }
+    };
+  </script>
+</head>
+<body>
+  <iframe
+    src="/scorm/index.html"
+    allowfullscreen
+    allow="fullscreen"
+    title="Introduction to Block-Based Coding SCORM Module"
+  ></iframe>
+</body>
+</html>

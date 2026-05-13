@@ -1,0 +1,148 @@
+<?xml version="1.0"?>
+
+<lom xmlns="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xmlns:hstm="SCORMEnginePackageProperties.xsd"
+     xsi:schemaLocation="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd 
+                        http://www.healthstream.com/HSTMConfiguration.xsd HSTMConfiguration.xsd">
+
+
+  <metametadata>
+    <metadatascheme>ADL SCORM(TM) 1.2</metadatascheme>
+  </metametadata>
+
+  <technical>
+    <format>text/html</format>
+    <location type="URI">https://ile-support.nko.navy.mil</location>
+
+    <hstm:HSTMConfiguration xmlns="http://www.healthstream.com/HSTMConfiguration.xsd">
+      
+      <controls>
+        <showFinishButton>no</showFinishButton>
+        <showHelp>no</showHelp>
+        <showProgressBar>no</showProgressBar>
+        <showCourseStructure>no</showCourseStructure>
+        <courseStructureStartsOpen>no</courseStructureStartsOpen>
+        <showNavBar>no</showNavBar>
+        <showTitleBar>no</showTitleBar>
+        <enableFlowNav>no</enableFlowNav>
+        <enableChoiceNav>no</enableChoiceNav>
+        <statusDisplay>combined</statusDisplay>
+      </controls>
+      <appearance>  
+      	<courseStructureWidth>300</courseStructureWidth>  
+      		<displayStage>  
+      			<desired>  
+      				<width>750</width>  
+      				<height>550</height>  
+      				<fullscreen>yes</fullscreen>  
+      			</desired>  
+      			<required>  
+      				<width>0</width>  
+      				<height>0</height>  
+      				<fullscreen>yes</fullscreen>  
+      			</required>  
+      		</displayStage>  
+      </appearance>
+      <behavior>
+        <returnToLmsAction>suspend_all</returnToLmsAction>
+        <disableRightClick>yes</disableRightClick>
+        <preventWindowResize>no</preventWindowResize>
+        <scoreRollupMode>average score of all units with scores</scoreRollupMode>
+        <statusRollupMode>complete when all units satisfactorily complete</statusRollupMode>
+        <firstScoIsPretest>no</firstScoIsPretest>
+        <finishCausesImmediateCommit>no</finishCausesImmediateCommit>
+        <invalidMenuItemAction>disable</invalidMenuItemAction>
+        <alwaysFlowToFirstSco>yes</alwaysFlowToFirstSco>
+        <logoutCausesPlayerExit>yes</logoutCausesPlayerExit>
+        <resetRtTiming>never</resetRtTiming>
+        <communications>
+          <maxFailedSubmissions>2</maxFailedSubmissions>
+          <commitFrequency>7894</commitFrequency>
+        </communications>
+        <debug>
+          <controlAudit>true</controlAudit>
+          <controlDetailed>true</controlDetailed>
+          <runtimeAudit>true</runtimeAudit>
+          <runtimeDetailed>true</runtimeDetailed>
+          <sequencingAudit>true</sequencingAudit>
+          <sequencingDetailed>false</sequencingDetailed>
+          <lookaheadAudit>true</lookaheadAudit>
+          <lookaheadDetailed>false</lookaheadDetailed>
+          <includeTimestamps>true</includeTimestamps>
+        </debug>
+        <launch>
+          <sco>frameset</sco>
+          <player>frameset</player>
+          <wrapScoWindowWithApi>no</wrapScoWindowWithApi>
+        </launch>
+        <exitActions>
+          <intermediateSco>
+            <satisfied>
+              <normal>continue</normal>
+              <suspend>message page</suspend>
+              <timeout>message page</timeout>
+              <logout>exit,confirmation</logout>
+            </satisfied>
+            <notSatisfied>
+              <normal>message page</normal>
+              <suspend>message page</suspend>
+              <timeout>message page</timeout>
+              <logout>exit,confirmation</logout>
+            </notSatisfied>
+          </intermediateSco>
+          <finalSco>
+            <satisfied>
+              <normal>exit,no confirmation</normal>
+              <suspend>exit,no confirmation</suspend>
+              <timeout>exit,no confirmation</timeout>
+              <logout>exit,no confirmation</logout>
+            </satisfied>
+            <notSatisfied>
+              <normal>exit,no confirmation</normal>
+              <suspend>exit,no confirmation</suspend>
+              <timeout>exit,no confirmation</timeout>
+              <logout>exit,no confirmation</logout>
+            </notSatisfied>
+          </finalSco>
+        </exitActions>
+      </behavior>
+    </hstm:HSTMConfiguration>
+  </technical>
+
+  <rights>
+    <cost>
+      <source>
+        <langstring xml:lang="x-none">LOMv1.0</langstring>
+      </source>
+      <value>
+        <langstring xml:lang="x-none">yes</langstring>
+      </value>
+    </cost>
+    <copyrightandotherrestrictions>
+      <source>
+        <langstring xml:lang="x-none">LOMv1.0</langstring>
+      </source>
+      <value>
+        <langstring xml:lang="x-none">yes</langstring>
+      </value>
+    </copyrightandotherrestrictions>
+  </rights>
+
+  <classification>
+    <purpose>
+      <source>
+        <langstring xml:lang="x-none">
+          ADLRegv1.0</langstring>
+        </source>
+      <value>
+        <langstring xml:lang="x-none">ADL Content Type</langstring>
+      </value>
+    </purpose>
+    <description>
+      <langstring>
+        "Content"
+      </langstring>
+    </description>
+  </classification>
+</lom>

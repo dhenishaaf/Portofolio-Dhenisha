@@ -7,7 +7,10 @@ const projects = [
     desc: "Developed SCORM 1.2/2004 interactive learning modules for Samsung Singapore using Chameleon Creator V2 with LMS integration and learner tracking.",
     category: "E-Learning",
     tools: "Chameleon Creator V2",
-    link: "https://your-project-link.com",
+    link: "/scorm-launch.html",
+    embed: "/scorm-launch.html",
+    embedLabel: "Introduction to Block-Based Coding",
+    scorm: true,
   },
   {
     title: "Training Module — Assemblr",
@@ -134,29 +137,17 @@ function Navbar() {
 function ProjectCard({ project, index }) {
   const [ref, inView] = useInView(0.1)
 
-  return (
-    <a
-      ref={ref}
-      href={project.link}
-      target="_blank"
-      rel="noopener noreferrer"
-      data-testid={`card-project-${index}`}
-      className="bg-[#f7f5f2] rounded-3xl p-8 block cursor-pointer group"
-      style={{
-        opacity: inView ? 1 : 0,
-        transform: inView ? 'translateY(0)' : 'translateY(40px)',
-        transition: `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s, box-shadow 0.3s ease`,
-        boxShadow: '0 1px 4px rgba(0,0,0,0.06)',
-      }}
-      onMouseEnter={e => {
-        e.currentTarget.style.boxShadow = '0 20px 40px rgba(0,0,0,0.12)'
-        e.currentTarget.style.transform = 'translateY(-4px)'
-      }}
-      onMouseLeave={e => {
-        e.currentTarget.style.boxShadow = '0 1px 4px rgba(0,0,0,0.06)'
-        e.currentTarget.style.transform = inView ? 'translateY(0)' : 'translateY(40px)'
-      }}
-    >
+  const cardStyle = {
+    opacity: inView ? 1 : 0,
+    transform: inView ? 'translateY(0)' : 'translateY(40px)',
+    transition: `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s, box-shadow 0.3s ease`,
+    boxShadow: '0 1px 4px rgba(0,0,0,0.06)',
+  }
+
+  const cardClass = "bg-[#f7f5f2] rounded-3xl p-8 block group"
+
+  const inner = (
+    <>
       <p className="text-xs uppercase tracking-[0.2em] text-neutral-400 mb-5 font-medium">
         {project.category}
       </p>
@@ -167,7 +158,31 @@ function ProjectCard({ project, index }) {
         {project.desc}
       </p>
 
-      {project.embed && (
+      {project.scorm && project.embed && (
+        <div className="mb-5">
+          <div className="overflow-hidden rounded-2xl border border-neutral-200 bg-white" style={{ height: '420px' }}>
+            <iframe
+              src={project.embed}
+              width="100%"
+              height="100%"
+              allow="fullscreen"
+              title={project.embedLabel || project.title}
+              style={{ border: 'none', display: 'block' }}
+            />
+          </div>
+          <a
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={e => e.stopPropagation()}
+            className="mt-3 flex items-center justify-center gap-2 w-full py-2.5 rounded-xl border border-neutral-300 text-xs font-medium text-neutral-600 hover:border-neutral-900 hover:text-neutral-900 transition-all"
+          >
+            Open Full Screen →
+          </a>
+        </div>
+      )}
+
+      {!project.scorm && project.embed && (
         <div className="mb-6 overflow-hidden rounded-2xl">
           <iframe
             src={project.embed}
@@ -175,6 +190,7 @@ function ProjectCard({ project, index }) {
             height="200"
             allow="autoplay"
             className="rounded-2xl border border-neutral-200"
+            title={project.title}
           />
         </div>
       )}
@@ -192,8 +208,49 @@ function ProjectCard({ project, index }) {
 
       <div className="text-xs text-neutral-400 border-t border-neutral-200 pt-4 flex items-center justify-between">
         <span>Tools: {project.tools}</span>
-        <span className="group-hover:translate-x-1 transition-transform inline-block">→</span>
+        {!project.scorm && <span className="group-hover:translate-x-1 transition-transform inline-block">→</span>}
       </div>
+    </>
+  )
+
+  if (project.scorm) {
+    return (
+      <div
+        ref={ref}
+        data-testid={`card-project-${index}`}
+        className={cardClass}
+        style={cardStyle}
+        onMouseEnter={e => {
+          e.currentTarget.style.boxShadow = '0 20px 40px rgba(0,0,0,0.12)'
+        }}
+        onMouseLeave={e => {
+          e.currentTarget.style.boxShadow = '0 1px 4px rgba(0,0,0,0.06)'
+        }}
+      >
+        {inner}
+      </div>
+    )
+  }
+
+  return (
+    <a
+      ref={ref}
+      href={project.link}
+      target="_blank"
+      rel="noopener noreferrer"
+      data-testid={`card-project-${index}`}
+      className={`${cardClass} cursor-pointer`}
+      style={cardStyle}
+      onMouseEnter={e => {
+        e.currentTarget.style.boxShadow = '0 20px 40px rgba(0,0,0,0.12)'
+        e.currentTarget.style.transform = 'translateY(-4px)'
+      }}
+      onMouseLeave={e => {
+        e.currentTarget.style.boxShadow = '0 1px 4px rgba(0,0,0,0.06)'
+        e.currentTarget.style.transform = inView ? 'translateY(0)' : 'translateY(40px)'
+      }}
+    >
+      {inner}
     </a>
   )
 }

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>[Course 1]: Introduction_to_Block_Based_Coding</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:300,400,600,700"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+
+    <link href="https://fonts.googleapis.com/css?family=:300,400,600,700" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <div id="modal-container" role="dialog" aria-live="assertive"></div>
+    <div id="image-zoom-container" role="dialog"></div>
+    
+    <script>
+      if (
+        /MSIE 7.0|MSIE 8.0|MSIE 9.0|MSIE 10.0/g.test(window.navigator.userAgent)
+      ) {
+        document.body.style.fontFamily = 'Poppins, Arial';
+        document.body.style.fontWeight = '300';
+        document.body.style.fontColor = '#000 !important';
+
+        var messageBody = "<span style='font-size: 18px;'>It looks like you have <a href='https://support.microsoft.com/en-nz/help/17472/windows-internet-explorer-11-fix-site-display-problems-compatibility-v' target='_blank' style='color: #000;'>compatibility mode</a> turned on and the course you're trying to view isn't supported by your browser. Please use Chrome or Firefox for the best experience.</span>";
+        var contactUs = "<span style='font-size: 14px;'><a href='mailto:support@chameleoncreator.com' target='_blank' style='color: #000;'>Contact us</a> if you have any questions.</span>";
+        var img = 'images/whoopsBrowserIncompatible.png';
+
+        document.body.innerHTML =
+          '<div style="padding: 50px 0 0 0"><div style="width: 100%; margin-bottom: 50px;"><img src=' +
+          img +
+          ' style="display: block; width: 760px; margin-left: auto; margin-right: auto;" /></div><div style="padding: 15px 33% 45px 33%; text-align: center;"><h1>Whoops!</h1><p>' +
+          messageBody +
+          '</p><p>' +
+          contactUs +
+          '</p></div></div>';
+      }
+    </script>
+
+    <script>
+      window.savedStore = {
+        "interactionsSeen": [],
+        "interactionsLocked": [],
+      }
+
+      window.scormVersion = "1.2";
+      window.mode = "PREVIEW";
+      window.hosted = false;
+
+      window.accountId = "K5YZyz7SGYvX"
+      window.projectId = "48873";
+      window.versionId = "";
+      window.source = "scorm";
+      window.enableAnalytics = false;
+      window.analyticsUrl = "https://data.chameleoncreatoranalytics.com";
+      window.collectUrl = "https://production-collect.chameleoncreatoranalytics.com/";
+      window.env = "production";
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+
+    <script src="./blocks.js"></script>
+    <script src="./fonts.js"></script>
+    <script src="./collect.js"></script>
+    <script src="./theme.js"></script>
+
+    <script src="./vendor.js"></script>
+    <script src="./module.js"></script>
+  </body>
+</html>
