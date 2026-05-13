@@ -1,0 +1,297 @@
+export default function PortfolioWebsite() {
+  const projects = [
+    {
+      title: "SCORM File for LMS",
+      desc: "Developed SCORM 1.2/2004 interactive learning modules for Samsung Singapore using Chameleon Creator V2 with LMS integration and learner tracking.",
+      category: "E-Learning",
+      tools: "Chameleon Creator V2",
+      link: "https://your-project-link.com",
+    },
+    {
+      title: "Training Module — Assemblr",
+      desc: "Created teacher-focused learning modules and Training of Trainers (ToT) materials integrated with Assemblr Edu features.",
+      category: "Training Module",
+      tools: "Canva",
+      link: "https://asblr.com/SAnB7d",
+      previewLabel: "Open Assemblr Project",
+    },
+    {
+      title: "Interactive Media — Naruna",
+      desc: "Designed gamified Japanese learning media using Construct 2 with multimedia assets, animations, and interactive gameplay.",
+      category: "Interactive Media",
+      tools: "Construct 2",
+      link: "https://your-project-link.com",
+    },
+    {
+      title: "Floor Gymnastics Learning Media",
+      desc: "Developed drill-and-practice interactive learning content using Articulate Storyline aligned with curriculum objectives.",
+      category: "Interactive Learning",
+      tools: "Articulate Storyline",
+      link: "https://your-project-link.com",
+    },
+    {
+      title: "Learning Video Production",
+      desc: "Produced educational explainer videos, animations, and MOOC learning content using Adobe Premiere Pro & After Effects.",
+      category: "Learning Video",
+      tools: "Adobe Premiere Pro & After Effects",
+      link: "https://drive.google.com/file/d/1YjA4hoguWSDsiK2D4O27wp3UvExlK4A9/view?usp=drive_link",
+      embed: "https://drive.google.com/file/d/1YjA4hoguWSDsiK2D4O27wp3UvExlK4A9/preview",
+    },
+    {
+      title: "Podcast Learning Video",
+      desc: "Worked as videographer, editor, and motion graphic designer for educational podcast series including NgoPi Care and Book-O-Latte.",
+      category: "Podcast Production",
+      tools: "Adobe Premiere Pro & After Effects",
+      link: "https://drive.google.com/file/d/1YjA4hoguWSDsiK2D4O27wp3UvExlK4A9/view?usp=drive_link",
+    },
+  ];
+
+  const skills = [
+    "Instructional Design",
+    "Learning Management System (LMS)",
+    "Articulate Storyline",
+    "Adobe Creative Suite",
+    "Canva",
+    "Curriculum Development",
+    "Multimedia Production",
+    "Educational Technology",
+    "3D AR Content",
+    "SCORM Development",
+    "Creative Content",
+  ];
+
+  return (
+    <div className="min-h-screen bg-[#f7f5f2] text-black font-sans">
+      {/* HERO */}
+      <section className="min-h-screen flex flex-col justify-center items-center px-6 text-center">
+        <p className="tracking-[0.3em] text-sm uppercase text-neutral-500 mb-4">
+          Portfolio Website
+        </p>
+
+        <h1 className="text-5xl md:text-7xl font-semibold leading-tight max-w-4xl">
+          Dhenisha
+          <br />
+          Agustine
+        </h1>
+
+        <p className="mt-8 text-neutral-600 text-lg md:text-xl max-w-2xl leading-relaxed">
+          Educational Technology graduate focused on training development,
+          instructional media, and creative digital experiences. Passionate
+          about creating engaging learning solutions through interactive
+          content, multimedia, and educational technology.
+        </p>
+
+        <div className="mt-10 flex gap-4 flex-wrap justify-center">
+          <button className="bg-black text-white px-6 py-3 rounded-full hover:opacity-90 transition">
+            View Projects
+          </button>
+
+          <button className="border border-black px-6 py-3 rounded-full hover:bg-black hover:text-white transition">
+            Contact Me
+          </button>
+        </div>
+      </section>
+
+      {/* ABOUT */}
+      <section className="px-6 md:px-20 py-24">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <p className="uppercase tracking-[0.2em] text-sm text-neutral-500 mb-4">
+              About Me
+            </p>
+
+            <h2 className="text-4xl font-semibold leading-snug mb-6">
+              Blending education,
+              <br />
+              creativity, and digital experiences.
+            </h2>
+          </div>
+
+          <div>
+            <p className="text-neutral-700 leading-relaxed text-lg">
+              Educational Technology graduate from Universitas Pendidikan
+              Indonesia with hands-on experience in educational content
+              development, e-learning, multimedia production, and social media
+              creative projects. Certified by BNSP in “Develop Learning
+              Media,” with strong expertise in instructional design,
+              curriculum-based learning development, and interactive digital
+              media.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* PROJECTS */}
+      <section className="px-6 md:px-20 py-24 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="mb-14">
+            <p className="uppercase tracking-[0.2em] text-sm text-neutral-500 mb-4">
+              Selected Works
+            </p>
+
+            <h2 className="text-4xl font-semibold">
+              Featured Projects
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
+            {projects.map((project, index) => (
+              <a
+                key={index}
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#f7f5f2] rounded-3xl p-8 hover:-translate-y-1 transition shadow-sm block hover:shadow-xl cursor-pointer"
+              >
+                <p className="text-sm uppercase tracking-[0.2em] text-neutral-500 mb-5">
+                  {project.category}
+                </p>
+
+                <h3 className="text-2xl font-semibold mb-4">
+                  {project.title}
+                </h3>
+
+                <p className="text-neutral-600 leading-relaxed mb-6">
+                  {project.desc}
+                </p>
+
+                {project.embed && (
+                  <div className="mb-6 overflow-hidden rounded-2xl">
+                    <iframe
+                      src={project.embed}
+                      width="100%"
+                      height="220"
+                      allow="autoplay"
+                      className="rounded-2xl border border-neutral-200"
+                    />
+                  </div>
+                )}
+
+                {project.previewLabel && (
+                  <div className="mb-6">
+                    <div className="w-full rounded-2xl border border-neutral-200 bg-white p-6 text-center">
+                      <p className="text-neutral-700 font-medium mb-2">
+                        {project.previewLabel}
+                      </p>
+                      <p className="text-sm text-neutral-500">
+                        Click this project card to view the live Assemblr experience.
+                      </p>
+                    </div>
+                  </div>
+                )}
+
+                <div className="text-sm text-neutral-500 border-t border-neutral-200 pt-4">
+                  Tools: {project.tools}
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* EXPERIENCE */}
+      <section className="px-6 md:px-20 py-24">
+        <div className="max-w-5xl mx-auto">
+          <p className="uppercase tracking-[0.2em] text-sm text-neutral-500 mb-4">
+            Experience
+          </p>
+
+          <h2 className="text-4xl font-semibold mb-14">
+            Journey & Experience
+          </h2>
+
+          <div className="space-y-10 border-l border-neutral-300 pl-8">
+            <div>
+              <h3 className="text-2xl font-medium">
+                Education Content Development — Assemblr
+              </h3>
+              <p className="text-neutral-500 mt-1">
+                Sep 2024 – Present • Bandung
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-2xl font-medium">
+                Learning Module Developer Intern — Telkom Indonesia
+              </h3>
+              <p className="text-neutral-500 mt-1">
+                Aug 2023 – Dec 2023 • Bandung
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-2xl font-medium">
+                Learning Content Video Production Intern — Kompas Gramedia
+              </h3>
+              <p className="text-neutral-500 mt-1">
+                Feb 2023 – Jun 2023 • Jakarta
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-2xl font-medium">
+                Bachelor of Educational Technology
+              </h3>
+              <p className="text-neutral-500 mt-1">
+                Universitas Pendidikan Indonesia • GPA 3.77/4.00
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SKILLS */}
+      <section className="px-6 md:px-20 py-24 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <p className="uppercase tracking-[0.2em] text-sm text-neutral-500 mb-4">
+            Skills
+          </p>
+
+          <h2 className="text-4xl font-semibold mb-12">
+            Tools & Expertise
+          </h2>
+
+          <p className="text-neutral-600 max-w-2xl mb-10 leading-relaxed">
+            Experienced in developing interactive learning experiences,
+            educational multimedia, e-learning systems, and creative digital
+            content across educational and commercial projects.
+          </p>
+
+          <div className="flex flex-wrap gap-4">
+            {skills.map((skill, index) => (
+              <div
+                key={index}
+                className="px-5 py-3 rounded-full bg-[#f7f5f2] border border-neutral-200 text-neutral-700"
+              >
+                {skill}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CONTACT */}
+      <section className="px-6 md:px-20 py-32 text-center">
+        <p className="uppercase tracking-[0.2em] text-sm text-neutral-500 mb-4">
+          Contact
+        </p>
+
+        <h2 className="text-4xl md:text-5xl font-semibold leading-tight max-w-3xl mx-auto">
+          Let’s create meaningful
+          <br />
+          digital experiences together.
+        </h2>
+
+        <div className="mt-10 flex flex-wrap gap-4 justify-center">
+          <button className="bg-black text-white px-6 py-3 rounded-full hover:opacity-90 transition">
+            dhenishafadilla@gmail.com
+          </button>
+
+          <button className="border border-black px-6 py-3 rounded-full hover:bg-black hover:text-white transition">
+            LinkedIn Profile
+          </button>
+        </div>
+      </section>
+    </div>
+  );
+}
