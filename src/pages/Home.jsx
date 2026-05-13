@@ -1,9 +1,14 @@
 import { Link } from 'wouter'
 import FadeIn from '../components/FadeIn'
 import ProjectCard from '../components/ProjectCard'
-import { categories, getFeaturedProject } from '../data/projects'
+import { categories, getFeaturedProjects } from '../data/projects'
 
-const categoryNumbers = { course: '01', 'learning-module': '02', 'interactive-media': '03', 'learning-video': '04' }
+const categoryNumbers = {
+  course: '01',
+  'learning-module': '02',
+  'interactive-media': '03',
+  'learning-video': '04',
+}
 
 const skills = [
   'Instructional Design',
@@ -72,12 +77,18 @@ export default function Home() {
             instructional media, and creative digital experiences.
           </p>
           <div className="mt-10 flex gap-3 flex-wrap justify-center">
-            <a href="#projects" data-testid="button-view-projects"
-              className="bg-neutral-900 text-white px-7 py-3 rounded-full text-sm font-medium hover:bg-black transition-all hover:scale-[1.02] active:scale-[0.98]">
+            <a
+              href="#projects"
+              data-testid="button-view-projects"
+              className="bg-neutral-900 text-white px-7 py-3 rounded-full text-sm font-medium hover:bg-black transition-all hover:scale-[1.02] active:scale-[0.98]"
+            >
               View Projects
             </a>
-            <a href="#contact" data-testid="button-contact"
-              className="border border-neutral-300 text-neutral-700 px-7 py-3 rounded-full text-sm font-medium hover:border-neutral-900 hover:text-neutral-900 transition-all hover:scale-[1.02] active:scale-[0.98]">
+            <a
+              href="#contact"
+              data-testid="button-contact"
+              className="border border-neutral-300 text-neutral-700 px-7 py-3 rounded-full text-sm font-medium hover:border-neutral-900 hover:text-neutral-900 transition-all hover:scale-[1.02] active:scale-[0.98]"
+            >
               Contact Me
             </a>
           </div>
@@ -139,21 +150,22 @@ export default function Home() {
             <h2 className="text-4xl md:text-5xl font-semibold tracking-tight text-neutral-900 mb-4">
               Featured Projects
             </h2>
-            <p className="text-neutral-400 text-sm max-w-xl mb-16 leading-relaxed">
+            <p className="text-neutral-400 text-sm max-w-xl mb-20 leading-relaxed">
               Four areas of work — each with a live preview of a featured project. Click any category to see all projects.
             </p>
           </FadeIn>
 
-          <div className="space-y-20">
+          <div className="space-y-24">
             {categories.map((cat, catIdx) => {
-              const featured = getFeaturedProject(cat.id)
-              if (!featured) return null
+              const featured = getFeaturedProjects(cat.id)
+              if (!featured.length) return null
+
               return (
-                <FadeIn key={cat.id} delay={catIdx * 0.05}>
-                  <div className="grid md:grid-cols-[280px_1fr] gap-8 items-start">
-                    {/* Category label column */}
+                <FadeIn key={cat.id} delay={catIdx * 0.04}>
+                  <div className="grid md:grid-cols-[260px_1fr] gap-10 items-start">
+                    {/* Label column */}
                     <div className="md:sticky md:top-28">
-                      <p className="text-xs text-neutral-400 font-mono mb-2">{categoryNumbers[cat.id]}</p>
+                      <p className="text-xs text-neutral-300 font-mono mb-2">{categoryNumbers[cat.id]}</p>
                       <h3 className="text-2xl font-semibold text-neutral-900 mb-2">{cat.label}</h3>
                       <p className="text-sm text-neutral-400 leading-relaxed mb-6">{cat.tagline}</p>
                       <Link
@@ -165,13 +177,16 @@ export default function Home() {
                       </Link>
                     </div>
 
-                    {/* Featured project card */}
-                    <div>
-                      <ProjectCard
-                        project={featured}
-                        index={catIdx}
-                        embedHeight={360}
-                      />
+                    {/* Featured cards — 1 or 2 side by side */}
+                    <div className={featured.length > 1 ? 'grid md:grid-cols-2 gap-5' : ''}>
+                      {featured.map((p, i) => (
+                        <ProjectCard
+                          key={p.id}
+                          project={p}
+                          index={catIdx * 2 + i}
+                          embedHeight={featured.length > 1 ? 300 : 380}
+                        />
+                      ))}
                     </div>
                   </div>
                 </FadeIn>
@@ -224,7 +239,7 @@ export default function Home() {
           <div className="space-y-0">
             {education.map((item, i) => (
               <FadeIn key={i} delay={i * 0.1}>
-                <div className="flex items-start gap-8 py-8 border-b border-neutral-100 group">
+                <div className="flex items-start gap-8 py-8 border-b border-neutral-100">
                   <div className="w-36 flex-shrink-0">
                     <span className="text-xs text-neutral-400 font-medium">{item.period}</span>
                   </div>
@@ -281,12 +296,20 @@ export default function Home() {
             together.
           </h2>
           <div className="mt-12 flex flex-wrap gap-3 justify-center">
-            <a href="mailto:dhenishafadilla@gmail.com" data-testid="link-email"
-              className="bg-neutral-900 text-white px-7 py-3.5 rounded-full text-sm font-medium hover:bg-black transition-all hover:scale-[1.02] active:scale-[0.98]">
+            <a
+              href="mailto:dhenishafadilla@gmail.com"
+              data-testid="link-email"
+              className="bg-neutral-900 text-white px-7 py-3.5 rounded-full text-sm font-medium hover:bg-black transition-all hover:scale-[1.02] active:scale-[0.98]"
+            >
               dhenishafadilla@gmail.com
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" data-testid="link-linkedin"
-              className="border border-neutral-300 text-neutral-700 px-7 py-3.5 rounded-full text-sm font-medium hover:border-neutral-900 hover:text-neutral-900 transition-all hover:scale-[1.02] active:scale-[0.98]">
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-testid="link-linkedin"
+              className="border border-neutral-300 text-neutral-700 px-7 py-3.5 rounded-full text-sm font-medium hover:border-neutral-900 hover:text-neutral-900 transition-all hover:scale-[1.02] active:scale-[0.98]"
+            >
               LinkedIn Profile
             </a>
           </div>

@@ -1,0 +1,1040 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>level 5</name>
+    <events>
+        <event-group description="" sid="952081002216383" title="Leveling5">
+            <sub-events>
+                <event-block sid="743007707153709">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="417639787468724" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="385577206057360" type="txtName">
+                            <param id="0" name="Text">namaUser</param>
+                        </action>
+                        <action id="6" name="Set focused" sid="635815380050295" type="isi" />
+                        <action id="-9" name="Set value" sid="618239865482833" type="System">
+                            <param id="0" name="Variable">level5</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="382135657856602" type="System">
+                            <param id="0" name="Variable">sec</param>
+                            <param id="1" name="Value">30</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="409273832257548" type="System">
+                            <param id="0" name="Layer">&quot;UI_Menang&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="188626822212269" type="System">
+                            <param id="0" name="Layer">&quot;UI_Kalah&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="643348201276025" type="System">
+                            <param id="0" name="Variable">GameAktif</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="348498483468760" type="restart">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="0" name="Call function" sid="814704737630368" type="Function">
+                            <param id="0" name="Name">&quot;Pin&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="822291243885000" type="Function">
+                            <param id="0" name="Name">&quot;Pim&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="837181071128716">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="758932489887489" type="System">
+                            <param id="0" name="Variable">sec</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="317970683727535" type="System">
+                            <param id="0" name="Variable">GameAktif</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="442534317026197">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="303259765797903" type="System">
+                                    <param id="0" name="Interval (seconds)">1.0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Subtract from" sid="605756119858170" type="System">
+                                    <param id="0" name="Variable">sec</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="185293700900331" type="timer">
+                                    <param id="0" name="Text">sec</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="699301668381404" title="Berhasil5">
+            <sub-events>
+                <event-block sid="593861333658568">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="373700922233785" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">5bener</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="494241764532672" type="System">
+                            <param id="0" name="Layer">&quot;UI_Menang&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="360008061141850" type="Function">
+                            <param id="0" name="Name">&quot;Pin&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="154684066982229" type="Function">
+                            <param id="0" name="Name">&quot;UI_Menang&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="7" name="Play (by name)" sid="146845216066255" type="Audio">
+                            <param id="0" name="Folder">0</param>
+                            <param id="1" name="Audio file name">&quot;win&quot;</param>
+                            <param id="3" name="Loop">0</param>
+                            <param id="4" name="Volume">10</param>
+                            <param id="2" name="Tag (optional)">&quot;win&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="861121021542565" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="685111013590503" type="5bener" />
+                        <action id="-9" name="Destroy" sid="204568886348544" type="55a" />
+                        <action id="-9" name="Destroy" sid="665867284804259" type="55b" />
+                    </actions>
+                    <sub-events>
+                        <event-block sid="364440661039193">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="180620688127758" type="System">
+                                    <param id="0" name="Variable">sec</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">20</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="566064187496595" type="System">
+                                    <param id="0" name="Variable">level5</param>
+                                    <param id="1" name="Value">3</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="136017829907263" type="System">
+                                    <param id="0" name="Seconds">1</param>
+                                </action>
+                                <action behavior="size" id="10" name="Start" sid="308098785752846" type="biki">
+                                    <param id="0" name="Start Mode">0</param>
+                                    <param id="1" name="Force use current">0</param>
+                                </action>
+                                <action behavior="size" id="3" name="Set target" sid="175866359600205" type="biki">
+                                    <param id="0" name="Target is">5</param>
+                                    <param id="1" name="Relativity">0</param>
+                                    <param id="2" name="Value">307</param>
+                                </action>
+                                <action behavior="size" id="3" name="Set target" sid="738119881478494" type="biki">
+                                    <param id="0" name="Target is">4</param>
+                                    <param id="1" name="Relativity">0</param>
+                                    <param id="2" name="Value">316</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="737132932633023" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action behavior="size" id="10" name="Start" sid="368120821449900" type="bite">
+                                    <param id="0" name="Start Mode">0</param>
+                                    <param id="1" name="Force use current">0</param>
+                                </action>
+                                <action behavior="size" id="3" name="Set target" sid="911938313168516" type="bite">
+                                    <param id="0" name="Target is">4</param>
+                                    <param id="1" name="Relativity">0</param>
+                                    <param id="2" name="Value">342.961</param>
+                                </action>
+                                <action behavior="size" id="3" name="Set target" sid="998953250386953" type="bite">
+                                    <param id="0" name="Target is">5</param>
+                                    <param id="1" name="Relativity">0</param>
+                                    <param id="2" name="Value">310.017</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="884761331069467" type="System">
+                                    <param id="0" name="Seconds">0.8</param>
+                                </action>
+                                <action behavior="size" id="10" name="Start" sid="803946952490005" type="bika">
+                                    <param id="0" name="Start Mode">0</param>
+                                    <param id="1" name="Force use current">0</param>
+                                </action>
+                                <action behavior="size" id="3" name="Set target" sid="770760463876247" type="bika">
+                                    <param id="0" name="Target is">4</param>
+                                    <param id="1" name="Relativity">0</param>
+                                    <param id="2" name="Value">316</param>
+                                </action>
+                                <action behavior="size" id="3" name="Set target" sid="424616358548373" type="bika">
+                                    <param id="0" name="Target is">5</param>
+                                    <param id="1" name="Relativity">0</param>
+                                    <param id="2" name="Value">307</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="633169431238898">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="917382797909307" type="System">
+                                    <param id="0" name="Variable">sec</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">10</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="307620398310788" type="System">
+                                    <param id="0" name="Variable">sec</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">20</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="626790673144782" type="System">
+                                    <param id="0" name="Variable">level5</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="945280338701105" type="System">
+                                    <param id="0" name="Seconds">1</param>
+                                </action>
+                                <action behavior="size" id="10" name="Start" sid="170986641318508" type="biki">
+                                    <param id="0" name="Start Mode">0</param>
+                                    <param id="1" name="Force use current">0</param>
+                                </action>
+                                <action behavior="size" id="3" name="Set target" sid="707709955118533" type="biki">
+                                    <param id="0" name="Target is">5</param>
+                                    <param id="1" name="Relativity">0</param>
+                                    <param id="2" name="Value">307</param>
+                                </action>
+                                <action behavior="size" id="3" name="Set target" sid="702064153995373" type="biki">
+                                    <param id="0" name="Target is">4</param>
+                                    <param id="1" name="Relativity">0</param>
+                                    <param id="2" name="Value">316</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="530607543374378" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action behavior="size" id="10" name="Start" sid="591068603590867" type="bite">
+                                    <param id="0" name="Start Mode">0</param>
+                                    <param id="1" name="Force use current">0</param>
+                                </action>
+                                <action behavior="size" id="3" name="Set target" sid="355223075084960" type="bite">
+                                    <param id="0" name="Target is">4</param>
+                                    <param id="1" name="Relativity">0</param>
+                                    <param id="2" name="Value">342.961</param>
+                                </action>
+                                <action behavior="size" id="3" name="Set target" sid="274685489453404" type="bite">
+                                    <param id="0" name="Target is">5</param>
+                                    <param id="1" name="Relativity">0</param>
+                                    <param id="2" name="Value">310.017</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="939667527083438">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="519752901352269" type="System">
+                                    <param id="0" name="Variable">sec</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">10</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="939528237990380" type="System">
+                                    <param id="0" name="Variable">level5</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="291435824538708" type="System">
+                                    <param id="0" name="Seconds">1</param>
+                                </action>
+                                <action behavior="size" id="10" name="Start" sid="505246181022956" type="biki">
+                                    <param id="0" name="Start Mode">0</param>
+                                    <param id="1" name="Force use current">0</param>
+                                </action>
+                                <action behavior="size" id="3" name="Set target" sid="629116894257315" type="biki">
+                                    <param id="0" name="Target is">5</param>
+                                    <param id="1" name="Relativity">0</param>
+                                    <param id="2" name="Value">307</param>
+                                </action>
+                                <action behavior="size" id="3" name="Set target" sid="827951566631889" type="biki">
+                                    <param id="0" name="Target is">4</param>
+                                    <param id="1" name="Relativity">0</param>
+                                    <param id="2" name="Value">316</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="886166999041879">
+                    <conditions>
+                        <condition id="0" name="On function" sid="961839426091257" type="Function">
+                            <param id="0" name="Name">&quot;UI_Menang&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="453769742306886" type="papanmenang">
+                            <param id="0" name="Y">1753</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="624334586530048" type="hitam">
+                            <param id="0" name="Opacity">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="10" name="Start" sid="144138384310417" type="papanmenang">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="181572550863520" type="papanmenang">
+                            <param id="0" name="Target is">0</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">Self.X</param>
+                        </action>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="881418051082793" type="papanmenang">
+                            <param id="0" name="Target is">1</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">536</param>
+                        </action>
+                        <action behavior="LiteTween" id="10" name="Start" sid="335598719172348" type="hitam">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="810962295618977" type="hitam">
+                            <param id="0" name="Target is">3</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">50</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="767761386658927" type="bika">
+                            <param id="0" name="Width">0</param>
+                            <param id="1" name="Height">0</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="288121153621613" type="biki">
+                            <param id="0" name="Width">0</param>
+                            <param id="1" name="Height">0</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="377251550577977" type="bite">
+                            <param id="0" name="Width">0</param>
+                            <param id="1" name="Height">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="656816582423289" type="restart">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="267679563099937" type="System">
+                            <param id="0" name="Variable">GameAktif</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="337656526882569">
+                    <conditions>
+                        <condition id="0" name="On function" sid="938703506681482" type="Function">
+                            <param id="0" name="Name">&quot;Pin&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="213573015087726" type="berhasil">
+                            <param id="0" name="Pin to">papanmenang</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="420590623946048" type="kembaliSoal">
+                            <param id="0" name="Pin to">papanmenang</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="127877301766877" type="restart">
+                            <param id="0" name="Pin to">papanmenang</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="577557279026362" type="tombolNext">
+                            <param id="0" name="Pin to">papanmenang</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="233811627453445" type="bika">
+                            <param id="0" name="Pin to">papanmenang</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="470194096335837" type="biki">
+                            <param id="0" name="Pin to">papanmenang</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="177217620134740" type="bite">
+                            <param id="0" name="Pin to">papanmenang</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="192128584449659">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="738303102319726" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">kembaliSoal</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="282702453885384" type="System">
+                            <param id="0" name="Variable">sec</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="780057465105627" type="System">
+                            <param id="0" name="Layout">Level_4</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="911020775464353">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="676961555367279" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">restart</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-26" name="Restart layout" sid="418763422269036" type="System" />
+                        <action id="-9" name="Set value" sid="718208863337011" type="System">
+                            <param id="0" name="Variable">sec</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="735692636008516">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="935939712349240" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">tombolNext</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="458674790108113" type="System">
+                            <param id="0" name="Layout">Level_6</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="565620343450786" title="Gagal5">
+            <sub-events>
+                <event-block sid="170542120437464">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="225529318077405" type="System">
+                            <param id="0" name="Variable">sec</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="609177785573819" type="System">
+                            <param id="0" name="Variable">GameAktif</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="897116956730640" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="219145710293312" type="System">
+                            <param id="0" name="Variable">GameAktif</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Call function" sid="558529831741219" type="Function">
+                            <param id="0" name="Name">&quot;Pim&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="798399496191821" type="Function">
+                            <param id="0" name="Name">&quot;UI_Kalah&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Wait" sid="856680323384199" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="986907060214022" type="5bener" />
+                        <action id="-9" name="Destroy" sid="319264151073100" type="55a" />
+                        <action id="-9" name="Destroy" sid="994649797644244" type="55b" />
+                    </actions>
+                </event-block>
+                <event-block sid="565702325416984">
+                    <conditions>
+                        <condition id="0" name="On function" sid="295259206257622" type="Function">
+                            <param id="0" name="Name">&quot;UI_Kalah&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="608186561280433" type="System">
+                            <param id="0" name="Layer">&quot;UI_Kalah&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="929334807050867" type="System">
+                            <param id="0" name="Variable">GameAktif</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-2" name="Set Y" sid="453954292089021" type="papankalah">
+                            <param id="0" name="Y">1781</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="270460901057856" type="hitam">
+                            <param id="0" name="Opacity">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="10" name="Start" sid="722369342967026" type="papankalah">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="365775722016153" type="papankalah">
+                            <param id="0" name="Target is">0</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">Self.X</param>
+                        </action>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="680760477656318" type="papankalah">
+                            <param id="0" name="Target is">1</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">551</param>
+                        </action>
+                        <action behavior="LiteTween" id="10" name="Start" sid="262465605716929" type="hitam">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="694591312573625" type="hitam">
+                            <param id="0" name="Target is">3</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">50</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="604472985073845">
+                    <conditions>
+                        <condition id="0" name="On function" sid="224355298920641" type="Function">
+                            <param id="0" name="Name">&quot;Pim&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="534596149585183" type="waktuh">
+                            <param id="0" name="Pin to">papankalah</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="516633040328605" type="ulangik">
+                            <param id="0" name="Pin to">papankalah</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="380990326383979" type="mapk">
+                            <param id="0" name="Pin to">papankalah</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="291567316596086" type="nextk">
+                            <param id="0" name="Pin to">papankalah</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="335206873361135">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="528750091392234" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">mapk</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="270202505829023" type="System">
+                            <param id="0" name="Variable">sec</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="423566335248005" type="System">
+                            <param id="0" name="Layout">Level_4</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="122781977331827">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="419583218535027" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">ulangik</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-26" name="Restart layout" sid="179961684552200" type="System" />
+                        <action id="-9" name="Set value" sid="373963974876840" type="System">
+                            <param id="0" name="Variable">sec</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="827172302601632">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="591338793409581" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">55a</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="980937540646676" type="System">
+                            <param id="0" name="Variable">sec</param>
+                            <param id="1" name="Value">8</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="505958554917009" type="55a" />
+                        <action id="7" name="Play (by name)" sid="327986928364792" type="Audio">
+                            <param id="0" name="Folder">0</param>
+                            <param id="1" name="Audio file name">&quot;incorrect&quot;</param>
+                            <param id="3" name="Loop">0</param>
+                            <param id="4" name="Volume">10</param>
+                            <param id="2" name="Tag (optional)">&quot;salah&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="132780569110563">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="803950698600649" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">55b</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="466584975668769" type="System">
+                            <param id="0" name="Variable">sec</param>
+                            <param id="1" name="Value">8</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="882165749987974" type="55b" />
+                        <action id="7" name="Play (by name)" sid="728717570189389" type="Audio">
+                            <param id="0" name="Folder">0</param>
+                            <param id="1" name="Audio file name">&quot;incorrect&quot;</param>
+                            <param id="3" name="Loop">0</param>
+                            <param id="4" name="Volume">10</param>
+                            <param id="2" name="Tag (optional)">&quot;salah&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="359228115014051" title="Jawaban hover5">
+            <sub-events>
+                <event-block sid="624545188666725">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="555135510616488" type="Mouse">
+                            <param id="0" name="Object">55a</param>
+                        </condition>
+                        <condition id="-1" name="Every tick" sid="337142642812508" type="System" />
+                        <condition id="-6" name="Compare height" sid="345637359523427" type="55a">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="Height">150</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set cursor style" sid="498341073255200" type="Mouse">
+                            <param id="0" name="Cursor style">1</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="743408152405047" type="55a">
+                            <param id="0" name="Width">Self.Width+4</param>
+                            <param id="1" name="Height">Self.Height+4</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="154809602392739">
+                    <conditions>
+                        <condition id="7" inverted="1" name="Cursor is over object" sid="202017423360093" type="Mouse">
+                            <param id="0" name="Object">55a</param>
+                        </condition>
+                        <condition id="-1" name="Every tick" sid="857731518487006" type="System" />
+                        <condition id="-6" name="Compare height" sid="719256337914839" type="55a">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="Height">130</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set cursor style" sid="850499179598084" type="Mouse">
+                            <param id="0" name="Cursor style">0</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="920045888749205" type="55a">
+                            <param id="0" name="Width">Self.Width-4</param>
+                            <param id="1" name="Height">Self.Height-4</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="155337648404278">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="491097310172625" type="Mouse">
+                            <param id="0" name="Object">55b</param>
+                        </condition>
+                        <condition id="-1" name="Every tick" sid="408623160244988" type="System" />
+                        <condition id="-6" name="Compare height" sid="216341959804413" type="55b">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="Height">150</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set cursor style" sid="201179858620417" type="Mouse">
+                            <param id="0" name="Cursor style">1</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="282999983320569" type="55b">
+                            <param id="0" name="Width">Self.Width+4</param>
+                            <param id="1" name="Height">Self.Height+4</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="494365480650785">
+                    <conditions>
+                        <condition id="7" inverted="1" name="Cursor is over object" sid="601760382930885" type="Mouse">
+                            <param id="0" name="Object">55b</param>
+                        </condition>
+                        <condition id="-1" name="Every tick" sid="918263586268708" type="System" />
+                        <condition id="-6" name="Compare height" sid="698912137850859" type="55b">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="Height">130</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set cursor style" sid="798264775369714" type="Mouse">
+                            <param id="0" name="Cursor style">0</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="579871478668758" type="55b">
+                            <param id="0" name="Width">Self.Width-4</param>
+                            <param id="1" name="Height">Self.Height-4</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="310665878573717">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="607524401482964" type="Mouse">
+                            <param id="0" name="Object">5bener</param>
+                        </condition>
+                        <condition id="-1" name="Every tick" sid="806780758115483" type="System" />
+                        <condition id="-6" name="Compare height" sid="697154790480160" type="5bener">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="Height">150</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set cursor style" sid="521242093947536" type="Mouse">
+                            <param id="0" name="Cursor style">1</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="976072431696233" type="5bener">
+                            <param id="0" name="Width">Self.Width+4</param>
+                            <param id="1" name="Height">Self.Height+4</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="579837195565621">
+                    <conditions>
+                        <condition id="7" inverted="1" name="Cursor is over object" sid="647589525247206" type="Mouse">
+                            <param id="0" name="Object">5bener</param>
+                        </condition>
+                        <condition id="-1" name="Every tick" sid="970981331560391" type="System" />
+                        <condition id="-6" name="Compare height" sid="254372131241325" type="5bener">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="Height">130</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set cursor style" sid="343274749054333" type="Mouse">
+                            <param id="0" name="Cursor style">0</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="365215561168313" type="5bener">
+                            <param id="0" name="Width">Self.Width-4</param>
+                            <param id="1" name="Height">Self.Height-4</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="488802255724112" title="another button hover7">
+            <sub-events>
+                <event-block sid="642777976913833">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="521744724901222" type="Mouse">
+                            <param id="0" name="Object">mapk</param>
+                        </condition>
+                        <condition id="-1" name="Every tick" sid="571477710862287" type="System" />
+                        <condition id="-6" name="Compare height" sid="650011439428311" type="mapk">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="Height">244</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set cursor style" sid="573373179202081" type="Mouse">
+                            <param id="0" name="Cursor style">1</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="289716743161704" type="mapk">
+                            <param id="0" name="Width">Self.Width+8</param>
+                            <param id="1" name="Height">Self.Height+8</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="184498445635912">
+                    <conditions>
+                        <condition id="7" inverted="1" name="Cursor is over object" sid="439113436699435" type="Mouse">
+                            <param id="0" name="Object">mapk</param>
+                        </condition>
+                        <condition id="-1" name="Every tick" sid="546463668108022" type="System" />
+                        <condition id="-6" name="Compare height" sid="697004571453840" type="mapk">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="Height">244</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set cursor style" sid="350976379565634" type="Mouse">
+                            <param id="0" name="Cursor style">0</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="152168732120431" type="mapk">
+                            <param id="0" name="Width">Self.Width-4</param>
+                            <param id="1" name="Height">Self.Height-4</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="289897797258452">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="239565092089321" type="Mouse">
+                            <param id="0" name="Object">ulangik</param>
+                        </condition>
+                        <condition id="-1" name="Every tick" sid="921340452227181" type="System" />
+                        <condition id="-6" name="Compare height" sid="523970873709395" type="ulangik">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="Height">220</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set cursor style" sid="467682700738959" type="Mouse">
+                            <param id="0" name="Cursor style">1</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="667069983344043" type="ulangik">
+                            <param id="0" name="Width">Self.Width+4</param>
+                            <param id="1" name="Height">Self.Height+4</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="184357471687996">
+                    <conditions>
+                        <condition id="7" inverted="1" name="Cursor is over object" sid="640953681818997" type="Mouse">
+                            <param id="0" name="Object">ulangik</param>
+                        </condition>
+                        <condition id="-1" name="Every tick" sid="126173515608198" type="System" />
+                        <condition id="-6" name="Compare height" sid="147359115522482" type="ulangik">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="Height">200</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set cursor style" sid="432771635674338" type="Mouse">
+                            <param id="0" name="Cursor style">0</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="814334181703644" type="ulangik">
+                            <param id="0" name="Width">Self.Width-4</param>
+                            <param id="1" name="Height">Self.Height-4</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="561675951278401">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="650540956670196" type="Mouse">
+                            <param id="0" name="Object">nextLevel</param>
+                        </condition>
+                        <condition id="-1" name="Every tick" sid="389762979031159" type="System" />
+                        <condition id="-6" name="Compare height" sid="949153499704096" type="nextLevel">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="Height">220</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set cursor style" sid="590616260241205" type="Mouse">
+                            <param id="0" name="Cursor style">1</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="771289134841700" type="nextLevel">
+                            <param id="0" name="Width">Self.Width+4</param>
+                            <param id="1" name="Height">Self.Height+4</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="591804947035962">
+                    <conditions>
+                        <condition id="7" inverted="1" name="Cursor is over object" sid="388622948560436" type="Mouse">
+                            <param id="0" name="Object">nextLevel</param>
+                        </condition>
+                        <condition id="-1" name="Every tick" sid="597100701920755" type="System" />
+                        <condition id="-6" name="Compare height" sid="816642908168188" type="nextLevel">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="Height">200</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set cursor style" sid="229487887944475" type="Mouse">
+                            <param id="0" name="Cursor style">0</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="242751300936432" type="nextLevel">
+                            <param id="0" name="Width">Self.Width-4</param>
+                            <param id="1" name="Height">Self.Height-4</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="135051573644353">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="856488618571438" type="Mouse">
+                            <param id="0" name="Object">backButton</param>
+                        </condition>
+                        <condition id="-1" name="Every tick" sid="563292142443795" type="System" />
+                        <condition id="-6" name="Compare height" sid="339204179243318" type="backButton">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="Height">120</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set cursor style" sid="723930852146166" type="Mouse">
+                            <param id="0" name="Cursor style">1</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="831720016787460" type="backButton">
+                            <param id="0" name="Width">Self.Width+4</param>
+                            <param id="1" name="Height">Self.Height+4</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="472840878721043">
+                    <conditions>
+                        <condition id="7" inverted="1" name="Cursor is over object" sid="588254504975786" type="Mouse">
+                            <param id="0" name="Object">backButton</param>
+                        </condition>
+                        <condition id="-1" name="Every tick" sid="805402822874372" type="System" />
+                        <condition id="-6" name="Compare height" sid="338288489922270" type="backButton">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="Height">100</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set cursor style" sid="459174290361679" type="Mouse">
+                            <param id="0" name="Cursor style">0</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="141372067971871" type="backButton">
+                            <param id="0" name="Width">Self.Width-4</param>
+                            <param id="1" name="Height">Self.Height-4</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="759917433353988">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="854261846339591" type="Mouse">
+                            <param id="0" name="Object">kembaliSoal</param>
+                        </condition>
+                        <condition id="-1" name="Every tick" sid="558879693779340" type="System" />
+                        <condition id="-6" name="Compare height" sid="953474450543503" type="kembaliSoal">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="Height">220</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set cursor style" sid="240821687446808" type="Mouse">
+                            <param id="0" name="Cursor style">1</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="237016129154072" type="kembaliSoal">
+                            <param id="0" name="Width">Self.Width+4</param>
+                            <param id="1" name="Height">Self.Height+4</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="867851041980700">
+                    <conditions>
+                        <condition id="7" inverted="1" name="Cursor is over object" sid="960817739744486" type="Mouse">
+                            <param id="0" name="Object">kembaliSoal</param>
+                        </condition>
+                        <condition id="-1" name="Every tick" sid="568648910189507" type="System" />
+                        <condition id="-6" name="Compare height" sid="777822164899348" type="kembaliSoal">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="Height">205</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set cursor style" sid="681195539260404" type="Mouse">
+                            <param id="0" name="Cursor style">0</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="219418438488716" type="kembaliSoal">
+                            <param id="0" name="Width">Self.Width-4</param>
+                            <param id="1" name="Height">Self.Height-4</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="610635792603499">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="198964134301790" type="Mouse">
+                            <param id="0" name="Object">restart</param>
+                        </condition>
+                        <condition id="-1" name="Every tick" sid="777811861590262" type="System" />
+                        <condition id="-6" name="Compare height" sid="318138453051562" type="restart">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="Height">220</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set cursor style" sid="175278532880822" type="Mouse">
+                            <param id="0" name="Cursor style">1</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="363113542781961" type="restart">
+                            <param id="0" name="Width">Self.Width+4</param>
+                            <param id="1" name="Height">Self.Height+4</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="158539864114602">
+                    <conditions>
+                        <condition id="7" inverted="1" name="Cursor is over object" sid="135832150187572" type="Mouse">
+                            <param id="0" name="Object">restart</param>
+                        </condition>
+                        <condition id="-1" name="Every tick" sid="150105912345386" type="System" />
+                        <condition id="-6" name="Compare height" sid="426681068607432" type="restart">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="Height">205</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set cursor style" sid="324243899840238" type="Mouse">
+                            <param id="0" name="Cursor style">0</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="726543647338864" type="restart">
+                            <param id="0" name="Width">Self.Width-4</param>
+                            <param id="1" name="Height">Self.Height-4</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="131699645493957">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="127457169776997" type="Mouse">
+                            <param id="0" name="Object">tombolNext</param>
+                        </condition>
+                        <condition id="-1" name="Every tick" sid="503428805553020" type="System" />
+                        <condition id="-6" name="Compare height" sid="871727898183795" type="tombolNext">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="Height">220</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set cursor style" sid="955957268840772" type="Mouse">
+                            <param id="0" name="Cursor style">1</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="468759738288069" type="tombolNext">
+                            <param id="0" name="Width">Self.Width+4</param>
+                            <param id="1" name="Height">Self.Height+4</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="859383367875962">
+                    <conditions>
+                        <condition id="7" inverted="1" name="Cursor is over object" sid="653068819482431" type="Mouse">
+                            <param id="0" name="Object">tombolNext</param>
+                        </condition>
+                        <condition id="-1" name="Every tick" sid="774011705638173" type="System" />
+                        <condition id="-6" name="Compare height" sid="460755965043773" type="tombolNext">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="Height">205</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set cursor style" sid="900582078447295" type="Mouse">
+                            <param id="0" name="Cursor style">0</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="745179093830730" type="tombolNext">
+                            <param id="0" name="Width">Self.Width-4</param>
+                            <param id="1" name="Height">Self.Height-4</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

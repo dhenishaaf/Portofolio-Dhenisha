@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>pilMateri</name>
+    <events>
+        <event-block sid="767076910411558">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="7478442907232727" type="System" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="2456762421075316" type="System">
+                    <param id="0" name="Variable">Tick</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="181028476180131">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="1992068138534639" type="System">
+                            <param id="0" name="Variable">Tick</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">100</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="7685900693909633" type="buletKecil">
+                            <param id="0" name="Width">self.width+1</param>
+                            <param id="1" name="Height">Self.height+1</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="1509268290611478" type="buletGede">
+                            <param id="0" name="Width">Self.width+1</param>
+                            <param id="1" name="Height">Self.height+1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2993420329233065">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="7936203976250069" type="System">
+                            <param id="0" name="Variable">Tick</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">100</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="22866157920067" type="buletKecil">
+                            <param id="0" name="Width">self.width-1</param>
+                            <param id="1" name="Height">Self.height-1</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="3003850080476038" type="buletGede">
+                            <param id="0" name="Width">Self.width-1</param>
+                            <param id="1" name="Height">Self.height-1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6285238930228339">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="361321591954079" type="System">
+                            <param id="0" name="Variable">Tick</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">200</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="5313385040908158" type="System">
+                            <param id="0" name="Variable">Tick</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="5293595038536557">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="4979483707979063" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">btnmenulis</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="891118230981725" type="System">
+                    <param id="0" name="Layout">menulis</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="767421689427345">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="921650104633876" type="Mouse">
+                    <param id="0" name="Object">btnmenulis</param>
+                </condition>
+                <condition id="-1" name="Every tick" sid="547246641729788" type="System" />
+                <condition id="-6" name="Compare height" sid="929586652376439" type="btnmenulis">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="Height">250</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set cursor style" sid="434625994456457" type="Mouse">
+                    <param id="0" name="Cursor style">1</param>
+                </action>
+                <action id="-7" name="Set size" sid="499436444136730" type="btnmenulis">
+                    <param id="0" name="Width">Self.Width+4</param>
+                    <param id="1" name="Height">Self.Height+4</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="475556518853184">
+            <conditions>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="346020672495567" type="Mouse">
+                    <param id="0" name="Object">btnmenulis</param>
+                </condition>
+                <condition id="-1" name="Every tick" sid="618953290257222" type="System" />
+                <condition id="-6" name="Compare height" sid="194491866244832" type="btnmenulis">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="Height">240</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set cursor style" sid="118848959053408" type="Mouse">
+                    <param id="0" name="Cursor style">0</param>
+                </action>
+                <action id="-7" name="Set size" sid="712815052676428" type="btnmenulis">
+                    <param id="0" name="Width">Self.Width-4</param>
+                    <param id="1" name="Height">Self.Height-4</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3912417686572639">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="5820785239056461" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">btnmenghafal</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="998894133657826" type="System">
+                    <param id="0" name="Layout">menghafal</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="362168532072986">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="504553361379579" type="Mouse">
+                    <param id="0" name="Object">btnmenghafal</param>
+                </condition>
+                <condition id="-1" name="Every tick" sid="535553635592505" type="System" />
+                <condition id="-6" name="Compare height" sid="998935135728486" type="btnmenghafal">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="Height">250</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set cursor style" sid="488197545232546" type="Mouse">
+                    <param id="0" name="Cursor style">1</param>
+                </action>
+                <action id="-7" name="Set size" sid="466662610837641" type="btnmenghafal">
+                    <param id="0" name="Width">Self.Width+4</param>
+                    <param id="1" name="Height">Self.Height+4</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="191092735092398">
+            <conditions>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="948969179137998" type="Mouse">
+                    <param id="0" name="Object">btnmenghafal</param>
+                </condition>
+                <condition id="-1" name="Every tick" sid="847280617840790" type="System" />
+                <condition id="-6" name="Compare height" sid="611623935302676" type="btnmenghafal">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="Height">240</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set cursor style" sid="870812441533932" type="Mouse">
+                    <param id="0" name="Cursor style">0</param>
+                </action>
+                <action id="-7" name="Set size" sid="201743811067983" type="btnmenghafal">
+                    <param id="0" name="Width">Self.Width-4</param>
+                    <param id="1" name="Height">Self.Height-4</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="4213564339965468" title="buton menu">
+            <sub-events>
+                <event-block sid="6536047288131858">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="8274111131923135" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">menu</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="3694517197610224" type="System">
+                            <param id="0" name="Layout">mainMenu</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9412087644980484">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="4667481939242261" type="Mouse">
+                            <param id="0" name="Object">menu</param>
+                        </condition>
+                        <condition id="-1" name="Every tick" sid="4089166491724267" type="System" />
+                        <condition id="-6" name="Compare height" sid="9405789560940305" type="menu">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="Height">120</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set cursor style" sid="6868521570517229" type="Mouse">
+                            <param id="0" name="Cursor style">1</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="5750225303378539" type="menu">
+                            <param id="0" name="Width">Self.Width+4</param>
+                            <param id="1" name="Height">Self.Height+4</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6671881779082663">
+                    <conditions>
+                        <condition id="7" inverted="1" name="Cursor is over object" sid="6192056515885323" type="Mouse">
+                            <param id="0" name="Object">menu</param>
+                        </condition>
+                        <condition id="-1" name="Every tick" sid="5355888458325571" type="System" />
+                        <condition id="-6" name="Compare height" sid="6027749208371831" type="menu">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="Height">110</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set cursor style" sid="704956184971911" type="Mouse">
+                            <param id="0" name="Cursor style">0</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="7901535577016125" type="menu">
+                            <param id="0" name="Width">Self.Width-4</param>
+                            <param id="1" name="Height">Self.Height-4</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

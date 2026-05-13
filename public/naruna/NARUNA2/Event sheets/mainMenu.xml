@@ -1,0 +1,1497 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>mainMenu</name>
+    <events>
+        <variable constant="0" name="move" sid="561652844608183" static="0" type="number">1</variable>
+        <variable constant="0" name="menu" sid="499292414012618" static="0" type="text"></variable>
+        <event-block sid="477617677417726">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="603300649641817" type="System" />
+            </conditions>
+            <actions>
+                <action id="-4" name="Set layer visible" sid="633288146557885" type="System">
+                    <param id="0" name="Layer">&quot;Popup&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="506875915466811" type="System">
+                    <param id="0" name="Group name">&quot;Button menu&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="801397634750059" type="petunjuk1">
+                    <param id="0" name="Opacity">0</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="870267643692270" type="petunjuk2">
+                    <param id="0" name="Opacity">0</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="934559618210693" type="petunjukCopy">
+                    <param id="0" name="Opacity">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="375987319176302">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="329426558567058" type="System" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="386777164463608" type="System">
+                    <param id="0" name="Variable">Tick</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="406966893611522" type="petunjuk1">
+                    <param id="0" name="Object">jalur</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="228444260080312" type="petunjuk2">
+                    <param id="0" name="Object">jalur</param>
+                    <param id="1" name="Image point (optional)">1</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="581524315335308" type="petunjukCopy">
+                    <param id="0" name="Object">jalur</param>
+                    <param id="1" name="Image point (optional)">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="983559928823346">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="110160950092781" type="System">
+                    <param id="0" name="Variable">move</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="719590502171618" type="jalur">
+                    <param id="0" name="X">lerp(jalur.X, jalur1.X, 0.08)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="679094675676082">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="985727311915892" type="System">
+                    <param id="0" name="Variable">move</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="405955091308352" type="jalur">
+                    <param id="0" name="X">lerp(jalur.X, jalur2.X, 0.08)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="511443099144314">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="271766467306023" type="System">
+                    <param id="0" name="Variable">move</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="526828676983892" type="jalur">
+                    <param id="0" name="X">lerp(jalur.X, jalur3.X, 0.08)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1969817279580059">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="7372783591208682" type="System">
+                    <param id="0" name="Variable">Tick</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">100</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-7" name="Set size" sid="5764446807992275" type="Sprite2">
+                    <param id="0" name="Width">self.width+0.3</param>
+                    <param id="1" name="Height">Self.Height+0.3</param>
+                </action>
+                <action id="-7" name="Set size" sid="4344926760611661" type="owk">
+                    <param id="0" name="Width">Self.Width+0.3</param>
+                    <param id="1" name="Height">Self.Height+0.3</param>
+                </action>
+                <action id="-3" name="Set position" sid="9573140427769114" type="Sprite22">
+                    <param id="0" name="X">self.X+1</param>
+                    <param id="1" name="Y">Self.Y</param>
+                </action>
+                <action id="-3" name="Set position" sid="7177828038858431" type="Sprite21">
+                    <param id="0" name="X">self.X-1</param>
+                    <param id="1" name="Y">Self.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6319597169694802">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="3620395699802335" type="System">
+                    <param id="0" name="Variable">Tick</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">100</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-7" name="Set size" sid="2306165158525106" type="Sprite2">
+                    <param id="0" name="Width">self.width-0.3</param>
+                    <param id="1" name="Height">Self.Height-0.3</param>
+                </action>
+                <action id="-7" name="Set size" sid="2012100459580242" type="owk">
+                    <param id="0" name="Width">Self.Width-0.3</param>
+                    <param id="1" name="Height">Self.Height-0.3</param>
+                </action>
+                <action id="-3" name="Set position" sid="8823152533600432" type="Sprite22">
+                    <param id="0" name="X">self.X-1</param>
+                    <param id="1" name="Y">Self.Y</param>
+                </action>
+                <action id="-3" name="Set position" sid="89628730179057" type="Sprite21">
+                    <param id="0" name="X">self.X+1</param>
+                    <param id="1" name="Y">Self.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5800948702256272">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="5181229458642066" type="System">
+                    <param id="0" name="Variable">Tick</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">200</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="9064274682665084" type="System">
+                    <param id="0" name="Variable">Tick</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="877618328547029" title="Button menu">
+            <sub-events>
+                <event-group description="" sid="852733511687839" title="button latihan">
+                    <sub-events>
+                        <event-block sid="933502302340433">
+                            <conditions>
+                                <condition id="6" name="On object clicked" sid="693038826304420" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                    <param id="2" name="Object clicked">playBtn</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set cursor style" sid="742253628797857" type="Mouse">
+                                    <param id="0" name="Cursor style">0</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="720144916052586" type="hitam">
+                                    <param id="0" name="Opacity">0</param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="281262452666859" type="System">
+                                    <param id="0" name="Layer">&quot;Popup&quot;</param>
+                                    <param id="1" name="Visibility">0</param>
+                                </action>
+                                <action id="0" name="Call function" sid="339575361520158" type="Function">
+                                    <param id="0" name="Name">&quot;pop-inl&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="627408258860769" type="Function">
+                                    <param id="0" name="Name">&quot;pBtn&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-9" name="Set value" sid="596059361481513" type="System">
+                                    <param id="0" name="Variable">menu</param>
+                                    <param id="1" name="Value">&quot;pBtnout&quot;</param>
+                                </action>
+                                <action behavior="LiteTween" id="10" name="Start" sid="964666270658724" type="hitam">
+                                    <param id="0" name="Start Mode">0</param>
+                                    <param id="1" name="Force use current">0</param>
+                                </action>
+                                <action behavior="LiteTween" id="3" name="Set target" sid="607692949887091" type="hitam">
+                                    <param id="0" name="Target is">3</param>
+                                    <param id="1" name="Relativity">0</param>
+                                    <param id="2" name="Value">50</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="371836486596077">
+                            <conditions>
+                                <condition id="7" name="Cursor is over object" sid="864547259676173" type="Mouse">
+                                    <param id="0" name="Object">playBtn</param>
+                                </condition>
+                                <condition id="-1" name="Every tick" sid="630041470365297" type="System" />
+                                <condition id="-6" name="Compare height" sid="235726028976022" type="playBtn">
+                                    <param id="0" name="Comparison">3</param>
+                                    <param id="1" name="Height">254.406</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set cursor style" sid="802515486664607" type="Mouse">
+                                    <param id="0" name="Cursor style">1</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="485506229387561" type="playBtn">
+                                    <param id="0" name="Width">Self.Width+4</param>
+                                    <param id="1" name="Height">Self.Height+4</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="637125086486588" type="ll">
+                                    <param id="0" name="Width">Self.Width+20</param>
+                                    <param id="1" name="Height">Self.Height</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="263557067125611">
+                            <conditions>
+                                <condition id="7" inverted="1" name="Cursor is over object" sid="554085262285281" type="Mouse">
+                                    <param id="0" name="Object">playBtn</param>
+                                </condition>
+                                <condition id="-1" name="Every tick" sid="753356365206918" type="System" />
+                                <condition id="-6" name="Compare height" sid="759640112821971" type="playBtn">
+                                    <param id="0" name="Comparison">5</param>
+                                    <param id="1" name="Height">214.406</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set cursor style" sid="904366440406884" type="Mouse">
+                                    <param id="0" name="Cursor style">0</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="487607410857060" type="playBtn">
+                                    <param id="0" name="Width">Self.Width-4</param>
+                                    <param id="1" name="Height">Self.Height-4</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="156090125210091" type="ll">
+                                    <param id="0" name="Width">Self.Width-20</param>
+                                    <param id="1" name="Height">Self.Height</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="931620784930367" title="button petunjuk">
+                    <sub-events>
+                        <event-block sid="534256967141305">
+                            <conditions>
+                                <condition id="6" name="On object clicked" sid="235969201642086" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                    <param id="2" name="Object clicked">Sprite58</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set cursor style" sid="978790371824131" type="Mouse">
+                                    <param id="0" name="Cursor style">0</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="606542351481950" type="hitam">
+                                    <param id="0" name="Opacity">0</param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="619169026747025" type="System">
+                                    <param id="0" name="Layer">&quot;Popup&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="171681104942473" type="Function">
+                                    <param id="0" name="Name">&quot;pop-in&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-9" name="Set value" sid="129303829455421" type="System">
+                                    <param id="0" name="Variable">menu</param>
+                                    <param id="1" name="Value">&quot;pout&quot;</param>
+                                </action>
+                                <action behavior="LiteTween" id="10" name="Start" sid="728628954957142" type="hitam">
+                                    <param id="0" name="Start Mode">0</param>
+                                    <param id="1" name="Force use current">0</param>
+                                </action>
+                                <action behavior="LiteTween" id="3" name="Set target" sid="916655468071394" type="hitam">
+                                    <param id="0" name="Target is">3</param>
+                                    <param id="1" name="Relativity">0</param>
+                                    <param id="2" name="Value">50</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="785526585805606" type="System">
+                                    <param id="0" name="Seconds">0.2</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="438779735831985" type="petunjuk1">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="177058758787711" type="petunjuk2">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="329145169604850" type="petunjukCopy">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="106384808408143">
+                            <conditions>
+                                <condition id="7" name="Cursor is over object" sid="230390186300845" type="Mouse">
+                                    <param id="0" name="Object">Sprite58</param>
+                                </condition>
+                                <condition id="-1" name="Every tick" sid="644224477439546" type="System" />
+                                <condition id="-6" name="Compare height" sid="932638958755486" type="Sprite58">
+                                    <param id="0" name="Comparison">3</param>
+                                    <param id="1" name="Height">254</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set cursor style" sid="500545790605322" type="Mouse">
+                                    <param id="0" name="Cursor style">1</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="496330679569525" type="Sprite58">
+                                    <param id="0" name="Width">Self.Width+4</param>
+                                    <param id="1" name="Height">Self.Height+4</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="444428462122436" type="pp">
+                                    <param id="0" name="Width">Self.Width+20</param>
+                                    <param id="1" name="Height">Self.Height</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="936936475394121">
+                            <conditions>
+                                <condition id="7" inverted="1" name="Cursor is over object" sid="136614920519663" type="Mouse">
+                                    <param id="0" name="Object">Sprite58</param>
+                                </condition>
+                                <condition id="-1" name="Every tick" sid="641267298627857" type="System" />
+                                <condition id="-6" name="Compare height" sid="333862844110006" type="Sprite58">
+                                    <param id="0" name="Comparison">5</param>
+                                    <param id="1" name="Height">214.406</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set cursor style" sid="144482233301521" type="Mouse">
+                                    <param id="0" name="Cursor style">0</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="663402436244039" type="Sprite58">
+                                    <param id="0" name="Width">Self.Width-4</param>
+                                    <param id="1" name="Height">Self.Height-4</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="944162641253870" type="pp">
+                                    <param id="0" name="Width">Self.Width-20</param>
+                                    <param id="1" name="Height">Self.Height</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="8499637223249604" title="button materi">
+                    <sub-events>
+                        <event-block sid="7551059395443729">
+                            <conditions>
+                                <condition id="6" name="On object clicked" sid="4068606248330934" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                    <param id="2" name="Object clicked">materiBtn</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set cursor style" sid="7345103842732599" type="Mouse">
+                                    <param id="0" name="Cursor style">0</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="6859496675704227" type="System">
+                                    <param id="0" name="Layout">pilMateri</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9412087644980484">
+                            <conditions>
+                                <condition id="7" name="Cursor is over object" sid="4667481939242261" type="Mouse">
+                                    <param id="0" name="Object">materiBtn</param>
+                                </condition>
+                                <condition id="-1" name="Every tick" sid="4089166491724267" type="System" />
+                                <condition id="-6" name="Compare height" sid="9405789560940305" type="materiBtn">
+                                    <param id="0" name="Comparison">3</param>
+                                    <param id="1" name="Height">254</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set cursor style" sid="6868521570517229" type="Mouse">
+                                    <param id="0" name="Cursor style">1</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="5750225303378539" type="materiBtn">
+                                    <param id="0" name="Width">Self.Width+4</param>
+                                    <param id="1" name="Height">Self.Height+4</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="2835377945449946" type="bb">
+                                    <param id="0" name="Width">Self.Width+20</param>
+                                    <param id="1" name="Height">Self.Height</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6671881779082663">
+                            <conditions>
+                                <condition id="7" inverted="1" name="Cursor is over object" sid="6192056515885323" type="Mouse">
+                                    <param id="0" name="Object">materiBtn</param>
+                                </condition>
+                                <condition id="-1" name="Every tick" sid="5355888458325571" type="System" />
+                                <condition id="-6" name="Compare height" sid="6027749208371831" type="materiBtn">
+                                    <param id="0" name="Comparison">5</param>
+                                    <param id="1" name="Height">214.406</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set cursor style" sid="704956184971911" type="Mouse">
+                                    <param id="0" name="Cursor style">0</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="7901535577016125" type="materiBtn">
+                                    <param id="0" name="Width">Self.Width-4</param>
+                                    <param id="1" name="Height">Self.Height-4</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="4408286374596966" type="bb">
+                                    <param id="0" name="Width">Self.Width-20</param>
+                                    <param id="1" name="Height">Self.Height</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="2595552894160395" title="button setting hover">
+                    <sub-events>
+                        <event-group description="" sid="215490094277823" title="button Setting">
+                            <sub-events>
+                                <event-block sid="2754755583328773">
+                                    <conditions>
+                                        <condition id="6" name="On object clicked" sid="6713415133508384" type="Mouse">
+                                            <param id="0" name="Mouse button">0</param>
+                                            <param id="1" name="Click type">0</param>
+                                            <param id="2" name="Object clicked">settingBtn</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="4586423577255301" type="settingBtn">
+                                            <param id="0" name="Instance variable">click</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="icon_position" id="10" name="Start" sid="5652257718932125" type="sfxBtn">
+                                            <param id="0" name="Start Mode">0</param>
+                                            <param id="1" name="Force use current">0</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="718120171884028" type="System">
+                                            <param id="0" name="Seconds">0.05</param>
+                                        </action>
+                                        <action behavior="icon_position" id="10" name="Start" sid="6779526577753502" type="settingBtn2">
+                                            <param id="0" name="Start Mode">0</param>
+                                            <param id="1" name="Force use current">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="4937559778987194">
+                                    <conditions>
+                                        <condition id="6" name="On object clicked" sid="304923270440049" type="Mouse">
+                                            <param id="0" name="Mouse button">0</param>
+                                            <param id="1" name="Click type">0</param>
+                                            <param id="2" name="Object clicked">settingBtn</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="4784617009756115" type="settingBtn">
+                                            <param id="0" name="Instance variable">click</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="4374126094380314" type="System">
+                                            <param id="0" name="Seconds">0.15</param>
+                                        </action>
+                                        <action behavior="icon_position" id="11" name="Reverse" sid="2732370834884786" type="sfxBtn">
+                                            <param id="0" name="Reverse mode">1</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="3672964888096544" type="System">
+                                            <param id="0" name="Seconds">0.05</param>
+                                        </action>
+                                        <action behavior="icon_position" id="11" name="Reverse" sid="8592345890286302" type="settingBtn2">
+                                            <param id="0" name="Reverse mode">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="5421670947244836">
+                                    <conditions>
+                                        <condition id="6" name="On object clicked" sid="3718942142709307" type="Mouse">
+                                            <param id="0" name="Mouse button">0</param>
+                                            <param id="1" name="Click type">0</param>
+                                            <param id="2" name="Object clicked">settingBtn</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-11" name="Add to" sid="9472605690167835" type="settingBtn">
+                                            <param id="0" name="Instance variable">click</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="1079658149194401">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="1659853885212998" type="settingBtn">
+                                            <param id="0" name="Instance variable">click</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="6225084552150012" type="settingBtn">
+                                            <param id="0" name="Instance variable">click</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="7746201475765042">
+                                    <conditions>
+                                        <condition id="6" name="On object clicked" sid="2262217181343394" type="Mouse">
+                                            <param id="0" name="Mouse button">0</param>
+                                            <param id="1" name="Click type">0</param>
+                                            <param id="2" name="Object clicked">settingBtn2</param>
+                                        </condition>
+                                        <condition id="1" inverted="1" name="Is overlapping another object" sid="5239843956954998" type="settingBtn2">
+                                            <param id="0" name="Object">settingBtn</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="22" name="Set paused" sid="3350805559422335" type="Audio">
+                                            <param id="0" name="Tag">&quot;backsound&quot;</param>
+                                            <param id="1" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="6692456048516859">
+                                    <conditions>
+                                        <condition id="6" name="On object clicked" sid="4800545452825994" type="Mouse">
+                                            <param id="0" name="Mouse button">0</param>
+                                            <param id="1" name="Click type">0</param>
+                                            <param id="2" name="Object clicked">sfxBtn</param>
+                                        </condition>
+                                        <condition id="1" inverted="1" name="Is overlapping another object" sid="8153610788135742" type="settingBtn2">
+                                            <param id="0" name="Object">settingBtn</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="22" name="Set paused" sid="7770995213211408" type="Audio">
+                                            <param id="0" name="Tag">&quot;backsound&quot;</param>
+                                            <param id="1" name="State">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-block sid="9412087644980484">
+                            <conditions>
+                                <condition id="7" name="Cursor is over object" sid="4667481939242261" type="Mouse">
+                                    <param id="0" name="Object">settingBtn</param>
+                                </condition>
+                                <condition id="-1" name="Every tick" sid="4089166491724267" type="System" />
+                                <condition id="-6" name="Compare height" sid="9405789560940305" type="settingBtn">
+                                    <param id="0" name="Comparison">3</param>
+                                    <param id="1" name="Height">170</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set cursor style" sid="6868521570517229" type="Mouse">
+                                    <param id="0" name="Cursor style">1</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="5750225303378539" type="settingBtn">
+                                    <param id="0" name="Width">Self.Width+4</param>
+                                    <param id="1" name="Height">Self.Height+4</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6671881779082663">
+                            <conditions>
+                                <condition id="7" inverted="1" name="Cursor is over object" sid="6192056515885323" type="Mouse">
+                                    <param id="0" name="Object">settingBtn</param>
+                                </condition>
+                                <condition id="-1" name="Every tick" sid="5355888458325571" type="System" />
+                                <condition id="-6" name="Compare height" sid="6027749208371831" type="settingBtn">
+                                    <param id="0" name="Comparison">5</param>
+                                    <param id="1" name="Height">150</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set cursor style" sid="704956184971911" type="Mouse">
+                                    <param id="0" name="Cursor style">0</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="7901535577016125" type="settingBtn">
+                                    <param id="0" name="Width">Self.Width-4</param>
+                                    <param id="1" name="Height">Self.Height-4</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="239272176243322" title="button tentang hover2">
+                    <sub-events>
+                        <event-block sid="769616238501052">
+                            <conditions>
+                                <condition id="7" name="Cursor is over object" sid="710183859885552" type="Mouse">
+                                    <param id="0" name="Object">Sprite63</param>
+                                </condition>
+                                <condition id="-1" name="Every tick" sid="563382259334935" type="System" />
+                                <condition id="-6" name="Compare height" sid="190490302382631" type="Sprite63">
+                                    <param id="0" name="Comparison">3</param>
+                                    <param id="1" name="Height">254</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set cursor style" sid="141758338667454" type="Mouse">
+                                    <param id="0" name="Cursor style">1</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="142932574735299" type="Sprite63">
+                                    <param id="0" name="Width">Self.Width+4</param>
+                                    <param id="1" name="Height">Self.Height+4</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="383307757025962" type="ttg">
+                                    <param id="0" name="Width">Self.Width+20</param>
+                                    <param id="1" name="Height">Self.Height</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="286799523682344">
+                            <conditions>
+                                <condition id="7" inverted="1" name="Cursor is over object" sid="539727740034833" type="Mouse">
+                                    <param id="0" name="Object">Sprite63</param>
+                                </condition>
+                                <condition id="-1" name="Every tick" sid="861706269456972" type="System" />
+                                <condition id="-6" name="Compare height" sid="504503110000035" type="Sprite63">
+                                    <param id="0" name="Comparison">5</param>
+                                    <param id="1" name="Height">214.406</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set cursor style" sid="689877013609650" type="Mouse">
+                                    <param id="0" name="Cursor style">0</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="666395868647475" type="Sprite63">
+                                    <param id="0" name="Width">Self.Width-4</param>
+                                    <param id="1" name="Height">Self.Height-4</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="619103981338206" type="ttg">
+                                    <param id="0" name="Width">Self.Width-20</param>
+                                    <param id="1" name="Height">Self.Height</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="927658636528374">
+                            <conditions>
+                                <condition id="6" name="On object clicked" sid="275221172212469" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                    <param id="2" name="Object clicked">Sprite63</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set cursor style" sid="877093105733330" type="Mouse">
+                                    <param id="0" name="Cursor style">0</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="439304666555667" type="hitam">
+                                    <param id="0" name="Opacity">0</param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="915380152150238" type="System">
+                                    <param id="0" name="Layer">&quot;Popup&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="755233178606357" type="Function">
+                                    <param id="0" name="Name">&quot;pop-in2&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="997682920484953" type="Function">
+                                    <param id="0" name="Name">&quot;tentang&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-9" name="Set value" sid="647015008063520" type="System">
+                                    <param id="0" name="Variable">menu</param>
+                                    <param id="1" name="Value">&quot;tout&quot;</param>
+                                </action>
+                                <action behavior="LiteTween" id="10" name="Start" sid="250883920206977" type="hitam">
+                                    <param id="0" name="Start Mode">0</param>
+                                    <param id="1" name="Force use current">0</param>
+                                </action>
+                                <action behavior="LiteTween" id="3" name="Set target" sid="690194377058604" type="hitam">
+                                    <param id="0" name="Target is">3</param>
+                                    <param id="1" name="Relativity">0</param>
+                                    <param id="2" name="Value">50</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="7333713686347073" title="button sfx hover">
+                    <sub-events>
+                        <event-block sid="9412087644980484">
+                            <conditions>
+                                <condition id="7" name="Cursor is over object" sid="4667481939242261" type="Mouse">
+                                    <param id="0" name="Object">settingBtn2</param>
+                                </condition>
+                                <condition id="-1" name="Every tick" sid="4089166491724267" type="System" />
+                                <condition id="-6" name="Compare height" sid="9405789560940305" type="settingBtn2">
+                                    <param id="0" name="Comparison">3</param>
+                                    <param id="1" name="Height">120</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set cursor style" sid="6868521570517229" type="Mouse">
+                                    <param id="0" name="Cursor style">1</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="5750225303378539" type="settingBtn2">
+                                    <param id="0" name="Width">Self.Width+4</param>
+                                    <param id="1" name="Height">Self.Height+4</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6671881779082663">
+                            <conditions>
+                                <condition id="7" inverted="1" name="Cursor is over object" sid="6192056515885323" type="Mouse">
+                                    <param id="0" name="Object">settingBtn2</param>
+                                </condition>
+                                <condition id="-1" name="Every tick" sid="5355888458325571" type="System" />
+                                <condition id="-6" name="Compare height" sid="6027749208371831" type="settingBtn2">
+                                    <param id="0" name="Comparison">5</param>
+                                    <param id="1" name="Height">100</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set cursor style" sid="704956184971911" type="Mouse">
+                                    <param id="0" name="Cursor style">0</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="7901535577016125" type="settingBtn2">
+                                    <param id="0" name="Width">Self.Width-4</param>
+                                    <param id="1" name="Height">Self.Height-4</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9412087644980484">
+                            <conditions>
+                                <condition id="7" name="Cursor is over object" sid="4667481939242261" type="Mouse">
+                                    <param id="0" name="Object">sfxBtn</param>
+                                </condition>
+                                <condition id="-1" name="Every tick" sid="4089166491724267" type="System" />
+                                <condition id="-6" name="Compare height" sid="9405789560940305" type="sfxBtn">
+                                    <param id="0" name="Comparison">3</param>
+                                    <param id="1" name="Height">120</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set cursor style" sid="6868521570517229" type="Mouse">
+                                    <param id="0" name="Cursor style">1</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="5750225303378539" type="sfxBtn">
+                                    <param id="0" name="Width">Self.Width+4</param>
+                                    <param id="1" name="Height">Self.Height+4</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6671881779082663">
+                            <conditions>
+                                <condition id="7" inverted="1" name="Cursor is over object" sid="6192056515885323" type="Mouse">
+                                    <param id="0" name="Object">sfxBtn</param>
+                                </condition>
+                                <condition id="-1" name="Every tick" sid="5355888458325571" type="System" />
+                                <condition id="-6" name="Compare height" sid="6027749208371831" type="sfxBtn">
+                                    <param id="0" name="Comparison">5</param>
+                                    <param id="1" name="Height">100</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set cursor style" sid="704956184971911" type="Mouse">
+                                    <param id="0" name="Cursor style">0</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="7901535577016125" type="sfxBtn">
+                                    <param id="0" name="Width">Self.Width-4</param>
+                                    <param id="1" name="Height">Self.Height-4</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="450857341723033" title="PopIs">
+            <sub-events>
+                <event-block sid="162008842686777">
+                    <conditions>
+                        <condition id="0" name="On function" sid="515479215549943" type="Function">
+                            <param id="0" name="Name">&quot;pBtn&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="110629716268422" type="nama">
+                            <param id="0" name="Y">-700</param>
+                        </action>
+                        <action behavior="LiteTween" id="10" name="Start" sid="279082430995815" type="nama">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="573978599264850" type="nama">
+                            <param id="0" name="Target is">0</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">Self.X</param>
+                        </action>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="558205725527987" type="nama">
+                            <param id="0" name="Target is">1</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">400</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="811705199457062">
+                    <conditions>
+                        <condition id="0" name="On function" sid="795510321895725" type="Function">
+                            <param id="0" name="Name">&quot;pBtnOut&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="LiteTween" id="10" name="Start" sid="229181131493480" type="nama">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="490780183035988" type="nama">
+                            <param id="0" name="Target is">0</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">Self.X</param>
+                        </action>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="346703162286779" type="nama">
+                            <param id="0" name="Target is">1</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">-1000</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="263813190378194">
+                    <conditions>
+                        <condition id="0" name="On function" sid="145015262234969" type="Function">
+                            <param id="0" name="Name">&quot;tentang&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="667095184942152" type="tp">
+                            <param id="0" name="Y">-700</param>
+                        </action>
+                        <action behavior="LiteTween" id="10" name="Start" sid="201349163803402" type="tp">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="166747602373219" type="tp">
+                            <param id="0" name="Target is">0</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">Self.X</param>
+                        </action>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="733525736877560" type="tp">
+                            <param id="0" name="Target is">1</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">520</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="833960544918628">
+                    <conditions>
+                        <condition id="0" name="On function" sid="321510326598054" type="Function">
+                            <param id="0" name="Name">&quot;tout&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="LiteTween" id="10" name="Start" sid="971673108713097" type="tp">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="797242397970347" type="tp">
+                            <param id="0" name="Target is">0</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">Self.X</param>
+                        </action>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="868834105175008" type="tp">
+                            <param id="0" name="Target is">1</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">-1000</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="382323516621913">
+                    <conditions>
+                        <condition id="0" name="On function" sid="721409187240931" type="Function">
+                            <param id="0" name="Name">&quot;petunjuk&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="455999193285704" type="petunjuk1">
+                            <param id="0" name="Y">-700</param>
+                        </action>
+                        <action behavior="LiteTween" id="10" name="Start" sid="400963420223067" type="petunjuk1">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="135660211663013" type="petunjuk1">
+                            <param id="0" name="Target is">0</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">958</param>
+                        </action>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="289000961967250" type="petunjuk1">
+                            <param id="0" name="Target is">1</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">515</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="792138804103858">
+                    <conditions>
+                        <condition id="0" name="On function" sid="304849146234258" type="Function">
+                            <param id="0" name="Name">&quot;pout&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="LiteTween" id="10" name="Start" sid="832242342507129" type="petunjuk1">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="455464152816061" type="petunjuk1">
+                            <param id="0" name="Target is">0</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">Self.X</param>
+                        </action>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="490135519874024" type="petunjuk1">
+                            <param id="0" name="Target is">1</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">-1000</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="3792049562236982" title="button sethover">
+            <sub-events>
+                <event-block sid="662283808254465">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="666863948563817" type="Mouse">
+                            <param id="0" name="Object">tombolExit</param>
+                        </condition>
+                        <condition id="-1" name="Every tick" sid="892694765362407" type="System" />
+                        <condition id="-6" name="Compare height" sid="669141870162544" type="tombolExit">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="Height">165</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set cursor style" sid="907259873298064" type="Mouse">
+                            <param id="0" name="Cursor style">1</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="872466767587376" type="tombolExit">
+                            <param id="0" name="Width">Self.Width+4</param>
+                            <param id="1" name="Height">Self.Height+4</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="880032636491936">
+                    <conditions>
+                        <condition id="7" inverted="1" name="Cursor is over object" sid="962060673153809" type="Mouse">
+                            <param id="0" name="Object">tombolExit</param>
+                        </condition>
+                        <condition id="-1" name="Every tick" sid="901417365258598" type="System" />
+                        <condition id="-6" name="Compare height" sid="162680586534478" type="tombolExit">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="Height">150</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set cursor style" sid="389211319998746" type="Mouse">
+                            <param id="0" name="Cursor style">0</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="132455686767115" type="tombolExit">
+                            <param id="0" name="Width">Self.Width-4</param>
+                            <param id="1" name="Height">Self.Height-4</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="388397700706016">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="946585387028085" type="Mouse">
+                            <param id="0" name="Object">tombolExit2</param>
+                        </condition>
+                        <condition id="-1" name="Every tick" sid="508540463643283" type="System" />
+                        <condition id="-6" name="Compare height" sid="232527411962849" type="tombolExit2">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="Height">165</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set cursor style" sid="207791087553309" type="Mouse">
+                            <param id="0" name="Cursor style">1</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="915778275749509" type="tombolExit2">
+                            <param id="0" name="Width">Self.Width+4</param>
+                            <param id="1" name="Height">Self.Height+4</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="247374606484867">
+                    <conditions>
+                        <condition id="7" inverted="1" name="Cursor is over object" sid="682820910573119" type="Mouse">
+                            <param id="0" name="Object">tombolExit2</param>
+                        </condition>
+                        <condition id="-1" name="Every tick" sid="268933048911190" type="System" />
+                        <condition id="-6" name="Compare height" sid="790096536572479" type="tombolExit2">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="Height">150</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set cursor style" sid="210226012244789" type="Mouse">
+                            <param id="0" name="Cursor style">0</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="755656286770101" type="tombolExit2">
+                            <param id="0" name="Width">Self.Width-4</param>
+                            <param id="1" name="Height">Self.Height-4</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="583345476547455">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="151998839757863" type="Mouse">
+                            <param id="0" name="Object">extll</param>
+                        </condition>
+                        <condition id="-1" name="Every tick" sid="440554335195709" type="System" />
+                        <condition id="-6" name="Compare height" sid="212896550427984" type="extll">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="Height">120</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set cursor style" sid="517609843527159" type="Mouse">
+                            <param id="0" name="Cursor style">1</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="204043676722876" type="extll">
+                            <param id="0" name="Width">Self.Width+4</param>
+                            <param id="1" name="Height">Self.Height+4</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="208006868949090">
+                    <conditions>
+                        <condition id="7" inverted="1" name="Cursor is over object" sid="274247605520395" type="Mouse">
+                            <param id="0" name="Object">extll</param>
+                        </condition>
+                        <condition id="-1" name="Every tick" sid="393056133168805" type="System" />
+                        <condition id="-6" name="Compare height" sid="363572212308490" type="extll">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="Height">100</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set cursor style" sid="296646590650314" type="Mouse">
+                            <param id="0" name="Cursor style">0</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="100223422359678" type="extll">
+                            <param id="0" name="Width">Self.Width-4</param>
+                            <param id="1" name="Height">Self.Height-4</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="555862475706188">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="844584798184936" type="Mouse">
+                            <param id="0" name="Object">mulai</param>
+                        </condition>
+                        <condition id="-1" name="Every tick" sid="154142301524832" type="System" />
+                        <condition id="-6" name="Compare height" sid="849852536855650" type="mulai">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="Height">150</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set cursor style" sid="923525047746550" type="Mouse">
+                            <param id="0" name="Cursor style">1</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="334675632319096" type="mulai">
+                            <param id="0" name="Width">Self.Width+4</param>
+                            <param id="1" name="Height">Self.Height+4</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="449172916495029">
+                    <conditions>
+                        <condition id="7" inverted="1" name="Cursor is over object" sid="944218268048970" type="Mouse">
+                            <param id="0" name="Object">mulai</param>
+                        </condition>
+                        <condition id="-1" name="Every tick" sid="345377915801077" type="System" />
+                        <condition id="-6" name="Compare height" sid="209325668089175" type="mulai">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="Height">120</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set cursor style" sid="602522890726002" type="Mouse">
+                            <param id="0" name="Cursor style">0</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="140166920543173" type="mulai">
+                            <param id="0" name="Width">Self.Width-4</param>
+                            <param id="1" name="Height">Self.Height-4</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="841832292800372" title="Popup2">
+            <sub-events>
+                <event-block sid="504075411542073">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="672274290324800" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="700914873611380" type="mask">
+                            <param id="0" name="Pin to">papanvid</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="706603404898537" type="tombolExit">
+                            <param id="0" name="Pin to">papanvid</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="607937052291246" type="nextMap">
+                            <param id="0" name="Pin to">papanvid</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="119581830046551" type="prevMap">
+                            <param id="0" name="Pin to">papanvid</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action id="-2" name="Set Y" sid="664326682082105" type="papanvid">
+                            <param id="0" name="Y">-700</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="893772131201440">
+                    <conditions>
+                        <condition id="0" name="On function" sid="149366691876168" type="Function">
+                            <param id="0" name="Name">&quot;pop-in&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="LiteTween" id="10" name="Start" sid="960565087722454" type="papanvid">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="986532024509699" type="papanvid">
+                            <param id="0" name="Target is">0</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">Self.X</param>
+                        </action>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="167679707221712" type="papanvid">
+                            <param id="0" name="Target is">1</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">500</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="447716580196410" type="System">
+                            <param id="0" name="Group name">&quot;Button menu&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="361564960112564">
+                    <conditions>
+                        <condition id="0" name="On function" sid="496133082241328" type="Function">
+                            <param id="0" name="Name">&quot;pop-out&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="LiteTween" id="10" name="Start" sid="351298151236764" type="papanvid">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="500898734746705" type="papanvid">
+                            <param id="0" name="Target is">0</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">Self.X</param>
+                        </action>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="741924119010269" type="papanvid">
+                            <param id="0" name="Target is">1</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">-1000</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="405888811358001" type="System">
+                            <param id="0" name="Group name">&quot;Button menu&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="581508365258276">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="667519105056568" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">tombolExit</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="471799458949159" type="Function">
+                            <param id="0" name="Name">&quot;pop-out&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="842006851269727" type="Function">
+                            <param id="0" name="Name">menu</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="668856833271038" type="Function">
+                            <param id="0" name="Name">&quot;pop-out&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="511839443885192" type="hitam">
+                            <param id="0" name="Opacity">0</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="715695882681752" type="petunjuk1">
+                            <param id="0" name="Opacity">0</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="959652413016033" type="petunjuk2">
+                            <param id="0" name="Opacity">0</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="541900014787082" type="petunjukCopy">
+                            <param id="0" name="Opacity">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="525639122365016">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="644783393571401" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">nextMap</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="230061577205057" type="System">
+                            <param id="0" name="Variable">move</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="979363910645098" type="System">
+                            <param id="0" name="Variable">move</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="342999577134140">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="804444176759524" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">prevMap</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="654649288463121" type="System">
+                            <param id="0" name="Variable">move</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="368806350826974" type="System">
+                            <param id="0" name="Variable">move</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="711953639213665" title="Popup4">
+            <sub-events>
+                <event-block sid="901658790344305">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="624553792082361" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="997149428847940" type="mask">
+                            <param id="0" name="Pin to">papanvid2</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="737555340938285" type="tombolExit2">
+                            <param id="0" name="Pin to">papanvid2</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action id="-2" name="Set Y" sid="585713325791157" type="papanvid2">
+                            <param id="0" name="Y">-700</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="304050486714290">
+                    <conditions>
+                        <condition id="0" name="On function" sid="579378710407807" type="Function">
+                            <param id="0" name="Name">&quot;pop-in2&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="LiteTween" id="10" name="Start" sid="681534599151653" type="papanvid2">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="559696562213528" type="papanvid2">
+                            <param id="0" name="Target is">0</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">Self.X</param>
+                        </action>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="456011312385364" type="papanvid2">
+                            <param id="0" name="Target is">1</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">500</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="389117993807356" type="System">
+                            <param id="0" name="Group name">&quot;Button menu&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="525981947721433">
+                    <conditions>
+                        <condition id="0" name="On function" sid="407584644611459" type="Function">
+                            <param id="0" name="Name">&quot;pop-out2&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="LiteTween" id="10" name="Start" sid="683063468640678" type="papanvid2">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="710601600308513" type="papanvid2">
+                            <param id="0" name="Target is">0</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">Self.X</param>
+                        </action>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="239791769902380" type="papanvid2">
+                            <param id="0" name="Target is">1</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">-1000</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="151010582513293" type="System">
+                            <param id="0" name="Group name">&quot;Button menu&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="979186684988164">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="538772514385639" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">tombolExit2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="788984274869182" type="Function">
+                            <param id="0" name="Name">&quot;pop-out2&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="341681979277611" type="Function">
+                            <param id="0" name="Name">menu</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="288335600169733" type="hitam">
+                            <param id="0" name="Opacity">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="549694171192542" title="Popup3">
+            <sub-events>
+                <event-block sid="205164809586803">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="284444363221147" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="513649235311393" type="mask">
+                            <param id="0" name="Pin to">lat</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="495749444039437" type="extll">
+                            <param id="0" name="Pin to">lat</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="226717414762901" type="mulai">
+                            <param id="0" name="Pin to">lat</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action id="-2" name="Set Y" sid="648870458315116" type="lat">
+                            <param id="0" name="Y">-700</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="184578283534921">
+                    <conditions>
+                        <condition id="0" name="On function" sid="832431048297075" type="Function">
+                            <param id="0" name="Name">&quot;pop-inl&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="LiteTween" id="10" name="Start" sid="109359641048500" type="lat">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="559065600746111" type="lat">
+                            <param id="0" name="Target is">0</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">Self.X</param>
+                        </action>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="903882349960019" type="lat">
+                            <param id="0" name="Target is">1</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">413</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="743792709504169" type="System">
+                            <param id="0" name="Group name">&quot;Button menu&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="609577221562714">
+                    <conditions>
+                        <condition id="0" name="On function" sid="127138233276132" type="Function">
+                            <param id="0" name="Name">&quot;pop-outl&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="LiteTween" id="10" name="Start" sid="439820675309221" type="lat">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="304280582623961" type="lat">
+                            <param id="0" name="Target is">0</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">Self.X</param>
+                        </action>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="828985786459346" type="lat">
+                            <param id="0" name="Target is">1</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">-1000</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="799785986059307" type="System">
+                            <param id="0" name="Group name">&quot;Button menu&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="668532210426465">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="533591870691822" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">extll</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="652394302822327" type="Function">
+                            <param id="0" name="Name">&quot;pop-outl&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="482764458640974" type="Function">
+                            <param id="0" name="Name">menu</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="374064010369444" type="hitam">
+                            <param id="0" name="Opacity">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="379363057183152">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="722351670587645" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">mulai</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="635409652773482" type="System">
+                            <param id="0" name="Layout">Level_1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="269337773183156" type="System">
+                            <param id="0" name="Variable">namaUser</param>
+                            <param id="1" name="Value">nama.Text</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

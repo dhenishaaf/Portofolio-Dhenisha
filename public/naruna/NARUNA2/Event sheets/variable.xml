@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>variable</name>
+    <events>
+        <variable constant="0" name="GameAktif" sid="351390984922237" static="0" type="number">0</variable>
+        <variable constant="0" name="sec" sid="5070949723048323" static="0" type="number">0</variable>
+        <variable constant="0" name="score" sid="787711190922895" static="0" type="number">0</variable>
+        <variable constant="0" name="check1" sid="8539707699050818" static="0" type="number">0</variable>
+        <variable constant="0" name="check2" sid="1066150611361623" static="0" type="number">0</variable>
+        <variable constant="0" name="check3" sid="3331602674196846" static="0" type="number">0</variable>
+        <variable constant="0" name="temp" sid="318299920006921" static="0" type="number">0</variable>
+        <variable constant="0" name="prevMapVar" sid="928511756476439" static="0" type="number">0</variable>
+        <variable constant="0" name="nextMapVar" sid="617564680372613" static="0" type="number">0</variable>
+        <variable constant="0" name="level1" sid="423466285152724" static="0" type="number">0</variable>
+        <variable constant="0" name="level2" sid="5768808221929965" static="0" type="number">0</variable>
+        <variable constant="0" name="level3" sid="8210588470877345" static="0" type="number">0</variable>
+        <variable constant="0" name="level4" sid="9369693386764435" static="0" type="number">0</variable>
+        <variable constant="0" name="level5" sid="6137079199750097" static="0" type="number">0</variable>
+        <variable constant="0" name="level6" sid="2430251763200838" static="0" type="number">0</variable>
+        <variable constant="0" name="level7" sid="9526887765580701" static="0" type="number">0</variable>
+        <variable constant="0" name="level8" sid="8129098575007219" static="0" type="number">0</variable>
+        <variable constant="0" name="level9" sid="8310978429233948" static="0" type="number">0</variable>
+        <variable constant="0" name="level10" sid="612377426464321" static="0" type="number">0</variable>
+        <variable constant="0" name="namaUser" sid="419820783651848" static="0" type="text"></variable>
+        <variable constant="0" name="poin" sid="432388836411454" static="0" type="number">0</variable>
+        <variable constant="0" name="Tick" sid="570570045974612" static="0" type="number">0</variable>
+    </events>
+</c2eventsheet>

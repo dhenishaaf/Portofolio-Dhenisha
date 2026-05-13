@@ -1,24 +1,33 @@
 import { useInView } from './FadeIn'
 
+const ASSEMBLR_ALLOW =
+  'camera; microphone; gyroscope; accelerometer; magnetometer; xr-spatial-tracking; fullscreen'
+
 function EmbedBlock({ project, embedHeight }) {
   const { embed, embedType, link, title } = project
-
-  if (!embed) return null
-
-  const commonStyle = { border: 'none', display: 'block', width: '100%', height: '100%' }
 
   if (embedType === 'scorm') {
     return (
       <div className="mb-5">
-        <div className="overflow-hidden rounded-2xl border border-neutral-200 bg-white" style={{ height: `${embedHeight}px` }}>
-          <iframe src={embed} width="100%" height="100%" allow="fullscreen" title={title} style={commonStyle} />
+        <div
+          className="overflow-hidden rounded-2xl border border-neutral-200 bg-white"
+          style={{ height: `${embedHeight}px` }}
+        >
+          <iframe
+            src={embed}
+            width="100%"
+            height="100%"
+            allow="fullscreen"
+            title={title}
+            style={{ border: 'none', display: 'block' }}
+          />
         </div>
         <a
           href={link}
           target="_blank"
           rel="noopener noreferrer"
           onClick={e => e.stopPropagation()}
-          className="mt-3 flex items-center justify-center gap-2 w-full py-2.5 rounded-xl border border-neutral-300 text-xs font-medium text-neutral-600 hover:border-neutral-900 hover:text-neutral-900 transition-all"
+          className="mt-3 flex items-center justify-center w-full py-2.5 rounded-xl border border-neutral-300 text-xs font-medium text-neutral-600 hover:border-neutral-900 hover:text-neutral-900 transition-all"
         >
           Open Full Screen →
         </a>
@@ -28,24 +37,114 @@ function EmbedBlock({ project, embedHeight }) {
 
   if (embedType === 'video') {
     return (
-      <div className="mb-6 rounded-2xl overflow-hidden border border-neutral-200 bg-black" style={{ aspectRatio: '16/9' }}>
-        <iframe src={embed} width="100%" height="100%" allow="autoplay; fullscreen" title={title} style={commonStyle} allowFullScreen />
+      <div
+        className="mb-6 rounded-2xl overflow-hidden border border-neutral-200 bg-black"
+        style={{ aspectRatio: '16/9' }}
+      >
+        <iframe
+          src={embed}
+          width="100%"
+          height="100%"
+          allow="autoplay; fullscreen"
+          title={title}
+          allowFullScreen
+          style={{ border: 'none', display: 'block' }}
+        />
       </div>
     )
   }
 
   if (embedType === 'slides') {
     return (
-      <div className="mb-6 rounded-2xl overflow-hidden border border-neutral-200 bg-white" style={{ aspectRatio: '16/9' }}>
-        <iframe src={embed} width="100%" height="100%" allowFullScreen title={title} style={commonStyle} />
+      <div
+        className="mb-6 rounded-2xl overflow-hidden border border-neutral-200 bg-white"
+        style={{ aspectRatio: '16/9' }}
+      >
+        <iframe
+          src={embed}
+          width="100%"
+          height="100%"
+          allowFullScreen
+          title={title}
+          style={{ border: 'none', display: 'block' }}
+        />
       </div>
     )
   }
 
   if (embedType === 'document') {
     return (
-      <div className="mb-6 rounded-2xl overflow-hidden border border-neutral-200 bg-white" style={{ height: `${embedHeight}px` }}>
-        <iframe src={embed} width="100%" height="100%" title={title} style={commonStyle} />
+      <div
+        className="mb-6 rounded-2xl overflow-hidden border border-neutral-200 bg-white"
+        style={{ height: `${embedHeight}px` }}
+      >
+        <iframe
+          src={embed}
+          width="100%"
+          height="100%"
+          title={title}
+          style={{ border: 'none', display: 'block' }}
+        />
+      </div>
+    )
+  }
+
+  if (embedType === 'assemblr-3d') {
+    return (
+      <div className="mb-5">
+        <div
+          className="overflow-hidden rounded-2xl border border-neutral-200 bg-neutral-900"
+          style={{ height: `${embedHeight}px` }}
+        >
+          <iframe
+            src={embed}
+            width="100%"
+            height="100%"
+            allow={ASSEMBLR_ALLOW}
+            allowFullScreen
+            title={title}
+            style={{ border: 'none', display: 'block' }}
+          />
+        </div>
+        <a
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={e => e.stopPropagation()}
+          className="mt-3 flex items-center justify-center w-full py-2.5 rounded-xl border border-neutral-300 text-xs font-medium text-neutral-600 hover:border-neutral-900 hover:text-neutral-900 transition-all"
+        >
+          Open in Assemblr →
+        </a>
+      </div>
+    )
+  }
+
+  if (embedType === 'interactive') {
+    return (
+      <div className="mb-5">
+        <div
+          className="overflow-hidden rounded-2xl border border-neutral-200 bg-white"
+          style={{ height: `${embedHeight}px` }}
+        >
+          <iframe
+            src={embed}
+            width="100%"
+            height="100%"
+            allow="fullscreen"
+            allowFullScreen
+            title={title}
+            style={{ border: 'none', display: 'block' }}
+          />
+        </div>
+        <a
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={e => e.stopPropagation()}
+          className="mt-3 flex items-center justify-center w-full py-2.5 rounded-xl border border-neutral-300 text-xs font-medium text-neutral-600 hover:border-neutral-900 hover:text-neutral-900 transition-all"
+        >
+          Open Full Screen →
+        </a>
       </div>
     )
   }
@@ -56,6 +155,9 @@ function EmbedBlock({ project, embedHeight }) {
 export default function ProjectCard({ project, index = 0, embedHeight = 360 }) {
   const [ref, inView] = useInView(0.08)
   const isScorm = project.embedType === 'scorm'
+  const isAssemblr3d = project.embedType === 'assemblr-3d'
+  const isInteractive = project.embedType === 'interactive'
+  const isNonClickable = isScorm || isAssemblr3d || isInteractive || project.link === '#'
 
   const cardStyle = {
     opacity: inView ? 1 : 0,
@@ -64,12 +166,16 @@ export default function ProjectCard({ project, index = 0, embedHeight = 360 }) {
     boxShadow: '0 1px 4px rgba(0,0,0,0.06)',
   }
 
+  const subcatLabel = project.subcategory
+    ? project.subcategory.replace(/-/g, ' ')
+    : null
+
   const inner = (
     <>
       <p className="text-xs uppercase tracking-[0.2em] text-neutral-400 mb-3 font-medium">
         {project.category.replace(/-/g, ' ')}
-        {project.subcategory && (
-          <span className="ml-2 text-neutral-300">/ {project.subcategory.replace(/-/g, ' ')}</span>
+        {subcatLabel && (
+          <span className="ml-2 text-neutral-300">/ {subcatLabel}</span>
         )}
       </p>
       <h3 className="text-xl font-semibold mb-3 text-neutral-900 group-hover:text-black transition-colors leading-snug">
@@ -79,9 +185,11 @@ export default function ProjectCard({ project, index = 0, embedHeight = 360 }) {
         {project.desc}
       </p>
 
-      <EmbedBlock project={project} embedHeight={embedHeight} />
+      {project.embed && (
+        <EmbedBlock project={project} embedHeight={embedHeight} />
+      )}
 
-      {project.previewLabel && (
+      {!project.embed && project.previewLabel && (
         <div className="mb-6">
           <div className="w-full rounded-2xl border border-neutral-200 bg-white p-5 text-center">
             <p className="text-neutral-700 font-medium mb-1 text-sm">{project.previewLabel}</p>
@@ -90,16 +198,27 @@ export default function ProjectCard({ project, index = 0, embedHeight = 360 }) {
         </div>
       )}
 
+      {/* Naruna: no HTML export available */}
+      {project.id === 'naruna' && (
+        <div className="mb-5 rounded-2xl border border-dashed border-neutral-300 bg-neutral-50 p-5 text-center">
+          <p className="text-xs text-neutral-400 leading-relaxed">
+            This is a Construct 2 game project. Export not available for browser preview.
+          </p>
+        </div>
+      )}
+
       <div className="text-xs text-neutral-400 border-t border-neutral-200 pt-4 flex items-center justify-between">
         <span>Tools: {project.tools}</span>
-        {!isScorm && <span className="group-hover:translate-x-1 transition-transform inline-block">→</span>}
+        {!isNonClickable && (
+          <span className="group-hover:translate-x-1 transition-transform inline-block">→</span>
+        )}
       </div>
     </>
   )
 
   const baseClass = 'bg-[#f7f5f2] rounded-3xl p-7 block group'
 
-  if (isScorm) {
+  if (isNonClickable) {
     return (
       <div
         ref={ref}

@@ -33,15 +33,15 @@ export const categories = [
   },
 ]
 
-// Sub-categories for categories that need them
 export const subCategoryConfig = {
+  'interactive-media': [
+    { id: 'game', label: 'Interactive Game' },
+    { id: '3d-simulation', label: '3D Simulation' },
+  ],
   'learning-video': [
     { id: 'animation', label: 'Animation' },
     { id: 'teacher-explainer', label: 'Teacher Explainer' },
     { id: 'podcast', label: 'Podcast Learning Video' },
-  ],
-  'interactive-media': [
-    { id: '3d-simulation', label: '3D Simulation' },
   ],
 }
 
@@ -59,17 +59,30 @@ export const allProjects = [
     embedType: 'scorm',
     featured: true,
   },
-  {
-    id: 'floor-gymnastics',
-    category: 'course',
-    title: 'Floor Gymnastics Learning Media',
-    desc: 'Developed drill-and-practice interactive learning content using Articulate Storyline aligned with curriculum objectives.',
-    tools: 'Articulate Storyline',
-    link: 'https://your-project-link.com',
-    featured: false,
-  },
 
   // ── Learning Module ──────────────────────────────────────────────────────────
+  {
+    id: 'edu-tech-module',
+    category: 'learning-module',
+    title: 'Educational Technology',
+    desc: 'Organized learning materials, ensuring effective structure for optimal learning. Aligned learning materials with handouts and learning objectives to maintain consistency and clarity. Adjusted the layout of modules to enhance readability and alignment with educational goals.',
+    tools: 'Microsoft PowerPoint',
+    link: 'https://www.canva.com/design/DAHJjlPtmVg/6uUZUx6bhdA-d7d6iTiSKQ/view',
+    embed: 'https://www.canva.com/design/DAHJjlPtmVg/6uUZUx6bhdA-d7d6iTiSKQ/view?embed',
+    embedType: 'slides',
+    featured: true,
+  },
+  {
+    id: 'telkom-module',
+    category: 'learning-module',
+    title: 'Telkom Indonesia',
+    desc: 'Developed training materials, including quizzes as assessments to measure learner progress. Adjusted the layout and structure of modules to ensure clarity and alignment with learning objectives. Uploaded training materials to the LMS, My Digiverse, ensuring accessibility and organization for users.',
+    tools: 'Microsoft PowerPoint & Microsoft Excel',
+    link: 'https://www.canva.com/design/DAHJjojuguk/1FTl7kucJUtp31ELlAcR4w/view',
+    embed: 'https://www.canva.com/design/DAHJjojuguk/1FTl7kucJUtp31ELlAcR4w/view?embed',
+    embedType: 'slides',
+    featured: false,
+  },
   {
     id: 'assemblr-edu-module',
     category: 'learning-module',
@@ -78,28 +91,6 @@ export const allProjects = [
     tools: 'Canva & Assemblr Studio',
     link: 'https://www.canva.com/design/DAGXiRytfKU/CWJAr5uLHzLqFoB4IfZHXw/view',
     embed: 'https://www.canva.com/design/DAGXiRytfKU/CWJAr5uLHzLqFoB4IfZHXw/view?embed',
-    embedType: 'slides',
-    featured: true,
-  },
-  {
-    id: 'edu-tech-module',
-    category: 'learning-module',
-    title: 'Educational Technology',
-    desc: 'Organized learning materials, ensuring effective structure for optimal learning. Aligned learning materials with handouts and learning objectives to maintain consistency and clarity. Adjusted the layout of modules to enhance readability and alignment with educational goals.',
-    tools: 'Microsoft PowerPoint',
-    link: 'https://docs.google.com/presentation/d/1S5JD6DZlRE5TOMC_PHMQXdHxQntoMwgW/edit?usp=sharing',
-    embed: 'https://docs.google.com/presentation/d/1S5JD6DZlRE5TOMC_PHMQXdHxQntoMwgW/embed?start=false&loop=false&delayms=3000',
-    embedType: 'slides',
-    featured: false,
-  },
-  {
-    id: 'telkom-module',
-    category: 'learning-module',
-    title: 'Telkom Indonesia',
-    desc: 'Developed training materials, including quizzes as assessments to measure learner progress. Adjusted the layout and structure of modules to ensure clarity and alignment with learning objectives. Uploaded training materials to the Learning Management System (LMS), My Digiverse, ensuring accessibility and organization for users.',
-    tools: 'Microsoft PowerPoint & Microsoft Excel',
-    link: 'https://docs.google.com/presentation/d/16XNJ_1Ie4jeDXWhpsIuLWaS1rwc82Ieb/edit?usp=drive_link',
-    embed: 'https://docs.google.com/presentation/d/16XNJ_1Ie4jeDXWhpsIuLWaS1rwc82Ieb/embed?start=false&loop=false&delayms=3000',
     embedType: 'slides',
     featured: false,
   },
@@ -115,7 +106,43 @@ export const allProjects = [
     featured: false,
   },
 
+  // ── Interactive Media — Game ──────────────────────────────────────────────────
+  {
+    id: 'naruna',
+    category: 'interactive-media',
+    subcategory: 'game',
+    title: 'Interactive Media — Naruna',
+    desc: 'Designed gamified Japanese language learning media using Construct 2 with multimedia assets, custom animations, and interactive gameplay mechanics. Features vocabulary building, hiragana recognition, and cultural exploration through game-based learning.',
+    tools: 'Construct 2',
+    link: '#',
+    featured: true,
+  },
+  {
+    id: 'berprograma',
+    category: 'interactive-media',
+    subcategory: 'game',
+    title: 'Senam Lantai (Floor Gymnastics)',
+    desc: 'Developed drill-and-practice interactive learning content for floor gymnastics using Articulate Storyline, aligned with Physical Education curriculum objectives. Includes step-by-step movement guides, video demonstrations, and formative assessments.',
+    tools: 'Articulate Storyline',
+    link: '/berprograma-launch.html',
+    embed: '/berprograma-launch.html',
+    embedType: 'interactive',
+    featured: false,
+  },
+
   // ── Interactive Media — 3D Simulation ────────────────────────────────────────
+  {
+    id: 'sel-hewan',
+    category: 'interactive-media',
+    subcategory: '3d-simulation',
+    title: 'Sel Hewan dan Tumbuhan',
+    desc: 'Interactive 3D simulation comparing animal and plant cell structures for biology education. Learners can rotate, zoom, and explore labeled cell components in augmented reality.',
+    tools: 'Assemblr Studio',
+    link: 'https://app-edu.assemblrworld.com/edukits/706',
+    embed: 'https://viewer-edu.assemblrworld.com/Embed/-FfxGsjsfXpSWdrnKzew',
+    embedType: 'assemblr-3d',
+    featured: true,
+  },
   {
     id: 'temp-scale',
     category: 'interactive-media',
@@ -124,7 +151,9 @@ export const allProjects = [
     desc: 'Interactive 3D simulation exploring temperature scales and conversions designed for science learning.',
     tools: 'Assemblr Studio',
     link: 'https://app-edu.assemblrworld.com/edukits/665',
-    featured: true,
+    embed: 'https://viewer-edu.assemblrworld.com/Embed/-owrC4jVFmfuR2yPgFYz',
+    embedType: 'assemblr-3d',
+    featured: false,
   },
   {
     id: 'budaya-sunda',
@@ -134,16 +163,8 @@ export const allProjects = [
     desc: 'Immersive 3D learning media presenting Sundanese cultural heritage through interactive AR elements.',
     tools: 'Assemblr Studio',
     link: 'https://app-edu.assemblrworld.com/edukits/691',
-    featured: false,
-  },
-  {
-    id: 'sel-hewan',
-    category: 'interactive-media',
-    subcategory: '3d-simulation',
-    title: 'Sel Hewan dan Tumbuhan',
-    desc: 'Interactive 3D simulation comparing animal and plant cell structures for biology education.',
-    tools: 'Assemblr Studio',
-    link: 'https://app-edu.assemblrworld.com/edukits/706',
+    embed: 'https://viewer-edu.assemblrworld.com/Embed/-UxldSYlimtAJ4KythY7',
+    embedType: 'assemblr-3d',
     featured: false,
   },
   {
@@ -154,6 +175,8 @@ export const allProjects = [
     desc: 'Gamified simulation helping learners understand weight comparison through interactive 3D objects.',
     tools: 'Assemblr Studio',
     link: 'https://app-edu.assemblrworld.com/edukits/755',
+    embed: 'https://viewer-edu.assemblrworld.com/Embed/-UAqabfAWvYAlmdJjhps',
+    embedType: 'assemblr-3d',
     featured: false,
   },
   {
@@ -164,6 +187,8 @@ export const allProjects = [
     desc: 'Vocational 3D simulation of SMAW (Shielded Metal Arc Welding) techniques for technical education.',
     tools: 'Assemblr Studio',
     link: 'https://app-edu.assemblrworld.com/edukits/786',
+    embed: 'https://viewer-edu.assemblrworld.com/Embed/-Srnaie6LcKiw7WRd22k',
+    embedType: 'assemblr-3d',
     featured: false,
   },
   {
@@ -174,6 +199,8 @@ export const allProjects = [
     desc: 'Interactive 3D reference for types of welding joints, supporting vocational engineering learners.',
     tools: 'Assemblr Studio',
     link: 'https://app-edu.assemblrworld.com/edukits/785',
+    embed: 'https://viewer-edu.assemblrworld.com/Embed/-ksLUd2eK7nPtG5oo5Qw',
+    embedType: 'assemblr-3d',
     featured: false,
   },
 
@@ -188,7 +215,7 @@ export const allProjects = [
     link: 'https://drive.google.com/file/d/1qC8o9-vteCogVIywx36uhjLTHqpT7bD2/view?usp=sharing',
     embed: 'https://drive.google.com/file/d/1qC8o9-vteCogVIywx36uhjLTHqpT7bD2/preview',
     embedType: 'video',
-    featured: true,
+    featured: false,
   },
   {
     id: 'media-script',
@@ -220,13 +247,13 @@ export const allProjects = [
     id: 'animal-reproduction',
     category: 'learning-video',
     subcategory: 'teacher-explainer',
-    title: 'Animal Reproduction',
+    title: 'Perkembangbiakan Hewan',
     desc: 'Educational explainer video covering animal reproduction concepts, designed to support biology teachers and students with clear visual explanations.',
     tools: 'Adobe Premiere Pro & After Effects',
     link: 'https://drive.google.com/file/d/1YjA4hoguWSDsiK2D4O27wp3UvExlK4A9/view?usp=drive_link',
     embed: 'https://drive.google.com/file/d/1YjA4hoguWSDsiK2D4O27wp3UvExlK4A9/preview',
     embedType: 'video',
-    featured: false,
+    featured: true,
   },
   {
     id: 'cooperative-learning',
@@ -259,7 +286,7 @@ export const allProjects = [
     category: 'learning-video',
     subcategory: 'podcast',
     title: 'Ngopi Care — ILO Indonesia',
-    desc: 'Produced an educational video podcast series titled "Ngopi Care: Ngobrol Pintar Care Economy", aimed at raising awareness and understanding of the care economy. The series consisted of 8 episodes, combining insightful discussions with engaging visuals. Contributed as videographer and video editor, responsible for capturing high-quality footage and enhancing the content with supporting visuals.',
+    desc: 'Produced an educational video podcast series titled "Ngopi Care: Ngobrol Pintar Care Economy", aimed at raising awareness of the care economy. 8 episodes combining insightful discussions with engaging visuals. Contributed as videographer and video editor.',
     tools: 'Adobe Premiere Pro & After Effects',
     link: 'https://www.youtube.com/watch?v=Guq1jXhEj08',
     embed: 'https://www.youtube.com/embed/Guq1jXhEj08',
@@ -271,7 +298,7 @@ export const allProjects = [
     category: 'learning-video',
     subcategory: 'podcast',
     title: 'Book-O-Latte Podcast',
-    desc: 'Bookolatte Podcast Video is a video podcast series consisting of 25 episodes, discussing various popular science books in an interesting and easy to understand way. Acting as Videographer, Editor, and Motion Graphic Designer, ensuring each episode has optimal visual and narrative quality.',
+    desc: 'Video podcast series consisting of 25 episodes discussing popular science books in an engaging way. Acting as Videographer, Editor, and Motion Graphic Designer, ensuring each episode has optimal visual and narrative quality.',
     tools: 'Adobe Premiere Pro & After Effects',
     link: 'https://www.youtube.com/watch?v=LAvDhpVbxAk',
     embed: 'https://www.youtube.com/embed/LAvDhpVbxAk',
@@ -280,6 +307,11 @@ export const allProjects = [
   },
 ]
 
+export function getFeaturedProjects(categoryId) {
+  return allProjects.filter((p) => p.category === categoryId && p.featured)
+}
+
+// Keep singular for backward compat
 export function getFeaturedProject(categoryId) {
   return allProjects.find((p) => p.category === categoryId && p.featured)
 }

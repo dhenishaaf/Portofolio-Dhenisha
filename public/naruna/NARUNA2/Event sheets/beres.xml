@@ -1,0 +1,496 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>beres</name>
+    <events>
+        <event-block sid="153890518872351">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="432807277757448" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="967182662636243" type="System">
+                    <param id="0" name="Variable">score</param>
+                    <param id="1" name="Value">level1+level2+level3+level4+level5+level6+level7+level8+level9+level10</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="143189216954040">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="361906928079167" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">30</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="534288573896945" type="System">
+                            <param id="0" name="Variable">poin</param>
+                            <param id="1" name="Value">100</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="315736394292151">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="556107025246418" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">29</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="463385956269664" type="System">
+                            <param id="0" name="Variable">poin</param>
+                            <param id="1" name="Value">98</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="162084802714917">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="592112656894108" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">28</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="288345379034155" type="System">
+                            <param id="0" name="Variable">poin</param>
+                            <param id="1" name="Value">95</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="925711226644589">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="339996634429860" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">27</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="488034586950932" type="System">
+                            <param id="0" name="Variable">poin</param>
+                            <param id="1" name="Value">92</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="831660285656678">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="325229431570550" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">26</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="589916254202667" type="System">
+                            <param id="0" name="Variable">poin</param>
+                            <param id="1" name="Value">90</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="872927724567601">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="429959873388282" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">25</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="371973184940678" type="System">
+                            <param id="0" name="Variable">poin</param>
+                            <param id="1" name="Value">88</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="536853412353805">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="217400937540208" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">24</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="304853944884218" type="System">
+                            <param id="0" name="Variable">poin</param>
+                            <param id="1" name="Value">85</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="422958705094703">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="824726044529102" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">23</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="678395298241727" type="System">
+                            <param id="0" name="Variable">poin</param>
+                            <param id="1" name="Value">82</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="897321449398652">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="331411427271402" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">22</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="755626533807251" type="System">
+                            <param id="0" name="Variable">poin</param>
+                            <param id="1" name="Value">80</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="650686972396518">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="978667699044913" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">21</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="791219299763562" type="System">
+                            <param id="0" name="Variable">poin</param>
+                            <param id="1" name="Value">78</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="711020150667119">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="474621748090075" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">20</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="232047337610056" type="System">
+                            <param id="0" name="Variable">poin</param>
+                            <param id="1" name="Value">75</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="125186211231426">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="348737088499561" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">19</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="401349750227698" type="System">
+                            <param id="0" name="Variable">poin</param>
+                            <param id="1" name="Value">72</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="342904785431034">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="714919211420963" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">18</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="715330501677970" type="System">
+                            <param id="0" name="Variable">poin</param>
+                            <param id="1" name="Value">70</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="319922315656072">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="344460858335209" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">17</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="326462263870648" type="System">
+                            <param id="0" name="Variable">poin</param>
+                            <param id="1" name="Value">68</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="926876418737597">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="394112289785033" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">16</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="988681582894669" type="System">
+                            <param id="0" name="Variable">poin</param>
+                            <param id="1" name="Value">65</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="693112564265642">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="780629544504064" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">15</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="741768423739271" type="System">
+                            <param id="0" name="Variable">poin</param>
+                            <param id="1" name="Value">62</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="983866897169621">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="734513326983157" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">14</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="163186500436015" type="System">
+                            <param id="0" name="Variable">poin</param>
+                            <param id="1" name="Value">60</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="277796372285758">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="846644651211327" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">13</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="188574328968466" type="System">
+                            <param id="0" name="Variable">poin</param>
+                            <param id="1" name="Value">58</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="751026287136662">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="480450865246383" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">12</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="786677832067228" type="System">
+                            <param id="0" name="Variable">poin</param>
+                            <param id="1" name="Value">55</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="965418173854628">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="493590506736437" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">11</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="478316798127428" type="System">
+                            <param id="0" name="Variable">poin</param>
+                            <param id="1" name="Value">52</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="312170977593179">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="360482193143975" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">10</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="566276887634854" type="System">
+                            <param id="0" name="Variable">poin</param>
+                            <param id="1" name="Value">50</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="940948503773659">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="389993711055208" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="274866015022291" type="name">
+                    <param id="0" name="Text">namaUser</param>
+                </action>
+                <action id="0" name="Set text" sid="369584058556229" type="bintang">
+                    <param id="0" name="Text">score</param>
+                </action>
+                <action id="0" name="Set text" sid="190788141078425" type="point">
+                    <param id="0" name="Text">poin</param>
+                </action>
+                <action behavior="LiteTween" id="10" name="Start" sid="866936098540582" type="selamat">
+                    <param id="0" name="Start Mode">0</param>
+                    <param id="1" name="Force use current">0</param>
+                </action>
+                <action behavior="LiteTween" id="10" name="Start" sid="468037637264560" type="kamu">
+                    <param id="0" name="Start Mode">0</param>
+                    <param id="1" name="Force use current">0</param>
+                </action>
+                <action behavior="LiteTween" id="10" name="Start" sid="165850475420755" type="kembali">
+                    <param id="0" name="Start Mode">0</param>
+                    <param id="1" name="Force use current">0</param>
+                </action>
+                <action behavior="LiteTween" id="10" name="Start" sid="595129534379138" type="opo">
+                    <param id="0" name="Start Mode">0</param>
+                    <param id="1" name="Force use current">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="790743078567591">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="561525944905939" type="System" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="693964105545464" type="System">
+                    <param id="0" name="Variable">Tick</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="422371549714922">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="473913663619881" type="System">
+                            <param id="0" name="Variable">Tick</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">100</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="633455659437297" type="buletKecil">
+                            <param id="0" name="Width">self.width+1</param>
+                            <param id="1" name="Height">Self.height+1</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="279240730921143" type="buletGede">
+                            <param id="0" name="Width">Self.width+1</param>
+                            <param id="1" name="Height">Self.height+1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="791510296153448">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="167598895910580" type="System">
+                            <param id="0" name="Variable">Tick</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">100</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="782882505345408" type="buletKecil">
+                            <param id="0" name="Width">self.width-1</param>
+                            <param id="1" name="Height">Self.height-1</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="217792301830105" type="buletGede">
+                            <param id="0" name="Width">Self.width-1</param>
+                            <param id="1" name="Height">Self.height-1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="183987505642777">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="300698186022941" type="System">
+                            <param id="0" name="Variable">Tick</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">200</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="736558134085621" type="System">
+                            <param id="0" name="Variable">Tick</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-group description="" sid="363353717673534" title="Button hover">
+            <sub-events>
+                <event-block sid="561864997388461">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="820391112523631" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">kembali</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set cursor style" sid="923395567912542" type="Mouse">
+                            <param id="0" name="Cursor style">0</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="189818618620545" type="System">
+                            <param id="0" name="Layout">mainMenu</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="408593024103456">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="345912184290776" type="Mouse">
+                            <param id="0" name="Object">kembali</param>
+                        </condition>
+                        <condition id="-1" name="Every tick" sid="220001983892301" type="System" />
+                        <condition id="-6" name="Compare height" sid="246826268373404" type="kembali">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="Height">140</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set cursor style" sid="639830872490401" type="Mouse">
+                            <param id="0" name="Cursor style">1</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="502999344900298" type="kembali">
+                            <param id="0" name="Width">Self.Width+4</param>
+                            <param id="1" name="Height">Self.Height+4</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="777127949150991">
+                    <conditions>
+                        <condition id="7" inverted="1" name="Cursor is over object" sid="770055900720320" type="Mouse">
+                            <param id="0" name="Object">kembali</param>
+                        </condition>
+                        <condition id="-1" name="Every tick" sid="674991928594226" type="System" />
+                        <condition id="-6" name="Compare height" sid="534173543793620" type="kembali">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="Height">130</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set cursor style" sid="752912290791634" type="Mouse">
+                            <param id="0" name="Cursor style">0</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="213587946699632" type="kembali">
+                            <param id="0" name="Width">Self.Width-4</param>
+                            <param id="1" name="Height">Self.Height-4</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

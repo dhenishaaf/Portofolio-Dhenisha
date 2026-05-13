@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>splashScreen</name>
+    <events>
+        <event-block sid="4177854245683811">
+            <conditions />
+            <actions>
+                <action id="-2" name="Go to layout" sid="5045385248585937" type="System">
+                    <param id="0" name="Layout">loadingPage</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

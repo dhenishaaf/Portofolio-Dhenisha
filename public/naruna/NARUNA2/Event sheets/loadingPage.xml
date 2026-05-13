@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>loadingPage</name>
+    <events>
+        <event-block sid="7102590533745912">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="2156279289670972" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="307038508128825" type="Audio">
+                    <param id="0" name="Audio file">backsound (mp3cut.net)</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">-13</param>
+                    <param id="1" name="Tag (optional)">&quot;backsound&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6576669131506199">
+            <conditions>
+                <condition behavior="Fade" id="1" name="On fade-in finished" sid="1631834917893269" type="naruna" />
+            </conditions>
+            <actions>
+                <action behavior="Fade" id="1" name="Start fade" sid="6055647549794325" type="loadingBackground" />
+                <action behavior="Fade" id="1" name="Start fade" sid="2532694649765645" type="loadingSprite" />
+                <action id="-16" name="Set opacity" sid="9026310926730208" type="loadingBackground">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="1906806515829445" type="loadingSprite">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+                <action behavior="Fade" id="3" name="Set wait time" sid="9458586948778498" type="naruna">
+                    <param id="0" name="Wait time">6</param>
+                </action>
+                <action behavior="Fade" id="3" name="Set wait time" sid="5085624262262341" type="loadingBackground">
+                    <param id="0" name="Wait time">5</param>
+                </action>
+                <action behavior="Fade" id="3" name="Set wait time" sid="9262458455263778" type="loadingSprite">
+                    <param id="0" name="Wait time">5</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1359083258333321">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="1270367043405822" type="System" />
+                <condition id="-10" name="Compare opacity" sid="4973540431356841" type="loadingSprite">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Opacity">100</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-5" name="Set width" sid="5296445905916742" type="loadingSprite">
+                    <param id="0" name="Width">loadingSprite.Width+4</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4528879545310224">
+            <conditions>
+                <condition id="-5" name="Compare width" sid="2860822584534306" type="loadingSprite">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="Width">950</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-5" name="Set width" sid="6035753593538354" type="loadingSprite">
+                    <param id="0" name="Width">950</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4118937128980431">
+            <conditions>
+                <condition behavior="Fade" id="2" name="On wait finished" sid="2876294993470809" type="naruna" />
+            </conditions>
+            <actions>
+                <action behavior="Fade" id="4" name="Set fade-out time" sid="1998297484591729" type="loadingBackground">
+                    <param id="0" name="Fade-out time">1</param>
+                </action>
+                <action behavior="Fade" id="4" name="Set fade-out time" sid="630441283867075" type="loadingSprite">
+                    <param id="0" name="Fade-out time">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3608965918074928">
+            <conditions>
+                <condition behavior="Fade" id="0" name="On fade-out finished" sid="2552544537501173" type="naruna" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="647026439577632" type="System">
+                    <param id="0" name="Layout">mainMenu</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1332255101884511">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="2123423827648207" type="System" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="2430016725994147" type="System">
+                    <param id="0" name="Variable">Tick</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="5660036457928577">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="9370673627733614" type="System">
+                            <param id="0" name="Variable">Tick</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">100</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="5003398506971559" type="naruna">
+                            <param id="0" name="Width">self.width+0.3</param>
+                            <param id="1" name="Height">Self.Height+0.3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1167236431982307">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="7440909808618959" type="System">
+                            <param id="0" name="Variable">Tick</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">100</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="9787855017462738" type="naruna">
+                            <param id="0" name="Width">self.width-0.3</param>
+                            <param id="1" name="Height">Self.Height-0.3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="799369841768692">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="1185196234328057" type="System">
+                            <param id="0" name="Variable">Tick</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">200</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="1661303087475998" type="System">
+                            <param id="0" name="Variable">Tick</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>
