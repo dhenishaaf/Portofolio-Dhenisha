@@ -4,34 +4,48 @@ import { useInView } from './FadeIn'
 const ASSEMBLR_ALLOW =
   'camera; microphone; gyroscope; accelerometer; magnetometer; xr-spatial-tracking; fullscreen'
 
-function ClickToPlayOverlay({ title, onPlay }) {
+function ClickToPlayOverlay({ title, thumbnail, onPlay, dark = false }) {
   return (
     <div
-      className="w-full flex flex-col items-center justify-center rounded-2xl border border-neutral-200 bg-neutral-900 cursor-pointer select-none"
-      style={{ height: '100%' }}
+      className="w-full h-full flex flex-col items-center justify-center rounded-2xl cursor-pointer select-none relative overflow-hidden"
       onClick={onPlay}
     >
-      <div className="w-16 h-16 rounded-full bg-white/10 border border-white/20 flex items-center justify-center mb-4 hover:bg-white/20 transition-colors">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
-          <polygon points="5,3 19,12 5,21" />
-        </svg>
+      {thumbnail ? (
+        <>
+          <img
+            src={thumbnail}
+            alt={title}
+            className="absolute inset-0 w-full h-full object-cover"
+            draggable={false}
+          />
+          <div className="absolute inset-0 bg-black/40" />
+        </>
+      ) : (
+        <div className={`absolute inset-0 ${dark ? 'bg-neutral-900' : 'bg-neutral-100'}`} />
+      )}
+      <div className="relative z-10 flex flex-col items-center gap-3">
+        <div className="w-16 h-16 rounded-full bg-white/20 border border-white/30 flex items-center justify-center hover:bg-white/30 transition-colors backdrop-blur-sm">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="white">
+            <polygon points="6,3 20,12 6,21" />
+          </svg>
+        </div>
+        <p className="text-white text-xs font-medium tracking-wide drop-shadow">Click to play</p>
       </div>
-      <p className="text-white/70 text-xs font-medium tracking-wide">Click to play</p>
-      <p className="text-white/40 text-[11px] mt-1">{title}</p>
     </div>
   )
 }
 
 function EmbedBlock({ project, embedHeight }) {
-  const { embed, embedType, link, title, clickToPlay } = project
+  const { embed, embedType, link, title, clickToPlay, thumbnail, portrait, customEmbedHeight } = project
   const [playing, setPlaying] = useState(false)
+  const height = customEmbedHeight || embedHeight
 
   if (embedType === 'scorm') {
     return (
       <div className="mb-5">
         <div
           className="overflow-hidden rounded-2xl border border-neutral-200 bg-white"
-          style={{ height: `${embedHeight}px` }}
+          style={{ height: `${height}px` }}
         >
           <iframe
             src={embed}
@@ -56,20 +70,32 @@ function EmbedBlock({ project, embedHeight }) {
   }
 
   if (embedType === 'video') {
+    const containerStyle = portrait
+      ? { height: `${height}px` }
+      : { aspectRatio: '16/9' }
+
     return (
       <div
         className="mb-6 rounded-2xl overflow-hidden border border-neutral-200 bg-black"
-        style={{ aspectRatio: '16/9' }}
+        style={containerStyle}
       >
-        <iframe
-          src={embed}
-          width="100%"
-          height="100%"
-          allow="autoplay; fullscreen"
-          title={title}
-          allowFullScreen
-          style={{ border: 'none', display: 'block' }}
-        />
+        {!playing && thumbnail ? (
+          <ClickToPlayOverlay
+            title={title}
+            thumbnail={thumbnail}
+            onPlay={() => setPlaying(true)}
+          />
+        ) : (
+          <iframe
+            src={embed}
+            width="100%"
+            height="100%"
+            allow="autoplay; fullscreen"
+            title={title}
+            allowFullScreen
+            style={{ border: 'none', display: 'block' }}
+          />
+        )}
       </div>
     )
   }
@@ -96,7 +122,7 @@ function EmbedBlock({ project, embedHeight }) {
     return (
       <div
         className="mb-6 rounded-2xl overflow-hidden border border-neutral-200 bg-white"
-        style={{ height: `${embedHeight}px` }}
+        style={{ height: `${height}px` }}
       >
         <iframe
           src={embed}
@@ -114,7 +140,7 @@ function EmbedBlock({ project, embedHeight }) {
       <div className="mb-5">
         <div
           className="overflow-hidden rounded-2xl border border-neutral-200 bg-neutral-900"
-          style={{ height: `${embedHeight}px` }}
+          style={{ height: `${height}px` }}
         >
           <iframe
             src={embed}
@@ -144,10 +170,15 @@ function EmbedBlock({ project, embedHeight }) {
       <div className="mb-5">
         <div
           className="overflow-hidden rounded-2xl border border-neutral-200"
-          style={{ height: `${embedHeight}px` }}
+          style={{ height: `${height}px` }}
         >
           {clickToPlay && !playing ? (
-            <ClickToPlayOverlay title={title} onPlay={() => setPlaying(true)} />
+            <ClickToPlayOverlay
+              title={title}
+              thumbnail={thumbnail}
+              onPlay={() => setPlaying(true)}
+              dark
+            />
           ) : (
             <iframe
               src={embed}

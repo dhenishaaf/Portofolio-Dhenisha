@@ -11,6 +11,7 @@ import {
 function SubCategorySection({ subCat, projects, catSlug }) {
   const items = projects.filter(p => p.subcategory === subCat.id)
   if (items.length === 0) return null
+  const single = subCat.singleColumn || items.length === 1
   return (
     <div className="mb-20">
       <FadeIn>
@@ -20,9 +21,14 @@ function SubCategorySection({ subCat, projects, catSlug }) {
           <span className="text-xs text-neutral-300 font-mono">{items.length} project{items.length !== 1 ? 's' : ''}</span>
         </div>
       </FadeIn>
-      <div className="grid md:grid-cols-2 gap-6">
+      <div className={single ? 'flex flex-col gap-6' : 'grid md:grid-cols-2 gap-6'}>
         {items.map((project, i) => (
-          <ProjectCard key={project.id} project={project} index={i} embedHeight={400} />
+          <ProjectCard
+            key={project.id}
+            project={project}
+            index={i}
+            embedHeight={project.customEmbedHeight || 400}
+          />
         ))}
       </div>
     </div>
@@ -123,17 +129,17 @@ export default function ProjectsPage({ params }) {
               ))}
               {/* Flat items that don't have a subcategory */}
               {flatProjects.length > 0 && (
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className={flatProjects.length === 1 ? 'flex flex-col gap-6' : 'grid md:grid-cols-2 gap-6'}>
                   {flatProjects.map((project, i) => (
-                    <ProjectCard key={project.id} project={project} index={i} embedHeight={400} />
+                    <ProjectCard key={project.id} project={project} index={i} embedHeight={project.customEmbedHeight || 400} />
                   ))}
                 </div>
               )}
             </>
           ) : (
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className={projects.length === 1 ? 'flex flex-col gap-6' : 'grid md:grid-cols-2 gap-6'}>
               {projects.map((project, i) => (
-                <ProjectCard key={project.id} project={project} index={i} embedHeight={400} />
+                <ProjectCard key={project.id} project={project} index={i} embedHeight={project.customEmbedHeight || 400} />
               ))}
             </div>
           )}
@@ -161,8 +167,8 @@ export default function ProjectsPage({ params }) {
       {/* FOOTER */}
       <footer className="px-6 md:px-20 py-8 border-t border-neutral-100">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
-          <Link href="/" className="text-xs text-neutral-400 hover:text-neutral-900 transition-colors">Dhenisha Agustine</Link>
-          <span className="text-xs text-neutral-300">Educational Technology</span>
+          <Link href="/" className="text-xs text-neutral-400 hover:text-neutral-900 transition-colors">Dhenisha Agustine Fadilla</Link>
+          <span className="text-xs text-neutral-300">Instructional Designer</span>
         </div>
       </footer>
     </div>

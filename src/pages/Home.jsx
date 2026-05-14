@@ -18,7 +18,7 @@ const skills = [
   'Canva',
   'Curriculum Development',
   'Multimedia Production',
-  'Educational Technology',
+  'Camera Operation',
   '3D AR Content',
   'SCORM Development',
   'Creative Content',
@@ -70,7 +70,7 @@ export default function Home() {
           </p>
           <h1 className="text-6xl md:text-8xl font-semibold leading-[1.02] tracking-tight max-w-4xl text-neutral-900">
             Dhenisha<br />
-            <span className="text-neutral-400">Agustine</span>
+            <span className="text-neutral-400">Agustine Fadilla</span>
           </h1>
           <p className="mt-8 text-neutral-500 text-base md:text-lg max-w-xl leading-relaxed mx-auto">
             Instructional designer and e-learning content developer with experience in creating interactive learning media, digital training materials, and creative educational experiences.
@@ -301,7 +301,7 @@ export default function Home() {
               dhenishafadilla@gmail.com
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/dhenishaaf"
               target="_blank"
               rel="noopener noreferrer"
               data-testid="link-linkedin"
@@ -316,8 +316,8 @@ export default function Home() {
       {/* FOOTER */}
       <footer className="px-6 md:px-20 py-8 border-t border-neutral-100">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
-          <span className="text-xs text-neutral-400">© 2025 Dhenisha Agustine</span>
-          <span className="text-xs text-neutral-300">Educational Technology</span>
+          <span className="text-xs text-neutral-400">© 2026 Dhenisha Agustine Fadilla</span>
+          <span className="text-xs text-neutral-300">Instructional Designer</span>
         </div>
       </footer>
 

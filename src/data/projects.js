@@ -35,7 +35,7 @@ export const categories = [
 
 export const subCategoryConfig = {
   'interactive-media': [
-    { id: 'game', label: 'Interactive Game' },
+    { id: 'game', label: 'Interactive Game', singleColumn: true },
     { id: '3d-simulation', label: '3D Simulation' },
   ],
   'learning-video': [
@@ -103,6 +103,7 @@ export const allProjects = [
     link: 'https://drive.google.com/file/d/1zQOgTSJHYRSeNeuy1J2HgXneXzRbu1G5/view?usp=sharing',
     embed: 'https://drive.google.com/file/d/1zQOgTSJHYRSeNeuy1J2HgXneXzRbu1G5/preview',
     embedType: 'document',
+    customEmbedHeight: 620,
     featured: false,
   },
   {
@@ -129,6 +130,7 @@ export const allProjects = [
     embed: '/naruna-launch.html',
     embedType: 'interactive',
     clickToPlay: true,
+    thumbnail: '/naruna2/NARUNA/images/naruna-sheet0.png',
     featured: true,
   },
   {
@@ -229,6 +231,7 @@ export const allProjects = [
     link: 'https://drive.google.com/file/d/1qC8o9-vteCogVIywx36uhjLTHqpT7bD2/view?usp=sharing',
     embed: 'https://drive.google.com/file/d/1qC8o9-vteCogVIywx36uhjLTHqpT7bD2/preview',
     embedType: 'video',
+    thumbnail: 'https://drive.google.com/thumbnail?id=1qC8o9-vteCogVIywx36uhjLTHqpT7bD2&sz=w640',
     featured: false,
   },
   {
@@ -241,6 +244,7 @@ export const allProjects = [
     link: 'https://drive.google.com/file/d/1s3tvIqMbmH6hpHCF3ycpPkPVIFccWehT/view?usp=sharing',
     embed: 'https://drive.google.com/file/d/1s3tvIqMbmH6hpHCF3ycpPkPVIFccWehT/preview',
     embedType: 'video',
+    thumbnail: 'https://drive.google.com/thumbnail?id=1s3tvIqMbmH6hpHCF3ycpPkPVIFccWehT&sz=w640',
     featured: false,
   },
   {
@@ -253,6 +257,7 @@ export const allProjects = [
     link: 'https://drive.google.com/file/d/1HsyIfIQRgHe0-XJJgmxjlztZ9D8hQbgR/view?usp=drive_link',
     embed: 'https://drive.google.com/file/d/1HsyIfIQRgHe0-XJJgmxjlztZ9D8hQbgR/preview',
     embedType: 'video',
+    thumbnail: 'https://drive.google.com/thumbnail?id=1HsyIfIQRgHe0-XJJgmxjlztZ9D8hQbgR&sz=w640',
     featured: false,
   },
 
@@ -267,6 +272,7 @@ export const allProjects = [
     link: 'https://drive.google.com/file/d/1YjA4hoguWSDsiK2D4O27wp3UvExlK4A9/view?usp=drive_link',
     embed: 'https://drive.google.com/file/d/1YjA4hoguWSDsiK2D4O27wp3UvExlK4A9/preview',
     embedType: 'video',
+    thumbnail: 'https://drive.google.com/thumbnail?id=1YjA4hoguWSDsiK2D4O27wp3UvExlK4A9&sz=w640',
     featured: true,
   },
   {
@@ -279,6 +285,9 @@ export const allProjects = [
     link: 'https://drive.google.com/file/d/1PHSC_dvxPWL6pJ1EXDHtN-H-t1Pf5NBy/view?usp=sharing',
     embed: 'https://drive.google.com/file/d/1PHSC_dvxPWL6pJ1EXDHtN-H-t1Pf5NBy/preview',
     embedType: 'video',
+    thumbnail: 'https://drive.google.com/thumbnail?id=1PHSC_dvxPWL6pJ1EXDHtN-H-t1Pf5NBy&sz=w640',
+    portrait: true,
+    customEmbedHeight: 500,
     featured: false,
   },
   {
@@ -291,6 +300,7 @@ export const allProjects = [
     link: 'https://drive.google.com/file/d/140xt0TmKXzMXSVaMIEOuemaPiioAUOmM/view?usp=drive_link',
     embed: 'https://drive.google.com/file/d/140xt0TmKXzMXSVaMIEOuemaPiioAUOmM/preview',
     embedType: 'video',
+    thumbnail: 'https://drive.google.com/thumbnail?id=140xt0TmKXzMXSVaMIEOuemaPiioAUOmM&sz=w640',
     featured: false,
   },
   {
@@ -303,6 +313,7 @@ export const allProjects = [
     link: 'https://drive.google.com/file/d/19lwkNbh35FrZShvsAouMI6J5gIFSO2mG/view?usp=drive_link',
     embed: 'https://drive.google.com/file/d/19lwkNbh35FrZShvsAouMI6J5gIFSO2mG/preview',
     embedType: 'video',
+    thumbnail: 'https://drive.google.com/thumbnail?id=19lwkNbh35FrZShvsAouMI6J5gIFSO2mG&sz=w640',
     featured: false,
   },
   {
@@ -315,6 +326,7 @@ export const allProjects = [
     link: 'https://drive.google.com/file/d/1YQeV6qtJwzu9vY0zjtWmpdveimu1fqRI/view?usp=sharing',
     embed: 'https://drive.google.com/file/d/1YQeV6qtJwzu9vY0zjtWmpdveimu1fqRI/preview',
     embedType: 'video',
+    thumbnail: 'https://drive.google.com/thumbnail?id=1YQeV6qtJwzu9vY0zjtWmpdveimu1fqRI&sz=w640',
     featured: false,
   },
 
@@ -329,6 +341,7 @@ export const allProjects = [
     link: 'https://www.youtube.com/watch?v=Guq1jXhEj08',
     embed: 'https://www.youtube.com/embed/Guq1jXhEj08',
     embedType: 'video',
+    thumbnail: 'https://img.youtube.com/vi/Guq1jXhEj08/maxresdefault.jpg',
     featured: false,
   },
   {
@@ -341,6 +354,7 @@ export const allProjects = [
     link: 'https://www.youtube.com/watch?v=LAvDhpVbxAk',
     embed: 'https://www.youtube.com/embed/LAvDhpVbxAk',
     embedType: 'video',
+    thumbnail: 'https://img.youtube.com/vi/LAvDhpVbxAk/maxresdefault.jpg',
     featured: false,
   },
 ]
