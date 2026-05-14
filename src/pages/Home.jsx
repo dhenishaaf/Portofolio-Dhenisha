@@ -112,9 +112,7 @@ export default function Home() {
           </FadeIn>
           <FadeIn delay={0.15}>
             <p className="text-neutral-500 leading-relaxed text-base mt-2">
-              Educational Technology graduate from Universitas Pendidikan Indonesia
-              with hands-on experience in educational content development, e-learning,
-              multimedia production, and social media creative projects.
+              Experienced in educational content development, e-learning, multimedia production, and social media creative projects across various digital platforms. Skilled in developing interactive learning media, curriculum-based educational content, and engaging digital learning experiences that support effective knowledge delivery and learner engagement.
             </p>
             <p className="text-neutral-500 leading-relaxed text-base mt-4">
               Certified by BNSP in "Develop Learning Media," with strong expertise in
