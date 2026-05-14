@@ -114,7 +114,9 @@ export const allProjects = [
     title: 'Interactive Media — Naruna',
     desc: 'Designed gamified Japanese language learning media using Construct 2 with multimedia assets, custom animations, and interactive gameplay mechanics. Features vocabulary building, hiragana recognition, and cultural exploration through game-based learning.',
     tools: 'Construct 2',
-    link: '#',
+    link: '/naruna-launch.html',
+    embed: '/naruna-launch.html',
+    embedType: 'interactive',
     featured: true,
   },
   {

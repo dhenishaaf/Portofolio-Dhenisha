@@ -198,14 +198,6 @@ export default function ProjectCard({ project, index = 0, embedHeight = 360 }) {
         </div>
       )}
 
-      {/* Naruna: no HTML export available */}
-      {project.id === 'naruna' && (
-        <div className="mb-5 rounded-2xl border border-dashed border-neutral-300 bg-neutral-50 p-5 text-center">
-          <p className="text-xs text-neutral-400 leading-relaxed">
-            This is a Construct 2 game project. Export not available for browser preview.
-          </p>
-        </div>
-      )}
 
       <div className="text-xs text-neutral-400 border-t border-neutral-200 pt-4 flex items-center justify-between">
         <span>Tools: {project.tools}</span>

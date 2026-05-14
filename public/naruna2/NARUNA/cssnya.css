@@ -1,0 +1,14 @@
+#input,input[type=text] {
+    width: 80%;
+    margin : 8px 0;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 3px solid #F2753B;
+    outline: none;
+    text-align: center;
+    background-color: transparent;
+    color:#F2753B;
+    font-size: 35px;
+    font-family: chunkfive;
+    margin-bottom: 100px;
+}
