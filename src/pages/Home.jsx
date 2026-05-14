@@ -52,6 +52,12 @@ const education = [
     detail: 'GPA 3.77 / 4.00',
     period: '2020 – 2024',
   },
+  {
+    degree: 'Multimedia',
+    institution: 'SMK Negeri 2 Cimahi',
+    detail: '',
+    period: '2017 – 2020',
+  },
 ]
 
 export default function Home() {

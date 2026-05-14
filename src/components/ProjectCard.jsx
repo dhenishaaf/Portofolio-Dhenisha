@@ -79,23 +79,15 @@ function EmbedBlock({ project, embedHeight }) {
         className="mb-6 rounded-2xl overflow-hidden border border-neutral-200 bg-black"
         style={containerStyle}
       >
-        {!playing && thumbnail ? (
-          <ClickToPlayOverlay
-            title={title}
-            thumbnail={thumbnail}
-            onPlay={() => setPlaying(true)}
-          />
-        ) : (
-          <iframe
-            src={embed}
-            width="100%"
-            height="100%"
-            allow="autoplay; fullscreen"
-            title={title}
-            allowFullScreen
-            style={{ border: 'none', display: 'block' }}
-          />
-        )}
+        <iframe
+          src={embed}
+          width="100%"
+          height="100%"
+          allow="autoplay; fullscreen"
+          title={title}
+          allowFullScreen
+          style={{ border: 'none', display: 'block' }}
+        />
       </div>
     )
   }
