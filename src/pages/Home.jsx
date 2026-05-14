@@ -66,7 +66,7 @@ export default function Home() {
         />
         <div style={{ animation: 'heroFadeIn 1s ease forwards' }}>
           <p className="tracking-[0.35em] text-xs uppercase text-neutral-400 mb-6 font-medium">
-            Portfolio — Educational Technology
+            Portfolio — Instructional Designer
           </p>
           <h1 className="text-6xl md:text-8xl font-semibold leading-[1.02] tracking-tight max-w-4xl text-neutral-900">
             Dhenisha<br />
