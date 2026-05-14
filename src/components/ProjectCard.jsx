@@ -1,10 +1,30 @@
+import { useState } from 'react'
 import { useInView } from './FadeIn'
 
 const ASSEMBLR_ALLOW =
   'camera; microphone; gyroscope; accelerometer; magnetometer; xr-spatial-tracking; fullscreen'
 
+function ClickToPlayOverlay({ title, onPlay }) {
+  return (
+    <div
+      className="w-full flex flex-col items-center justify-center rounded-2xl border border-neutral-200 bg-neutral-900 cursor-pointer select-none"
+      style={{ height: '100%' }}
+      onClick={onPlay}
+    >
+      <div className="w-16 h-16 rounded-full bg-white/10 border border-white/20 flex items-center justify-center mb-4 hover:bg-white/20 transition-colors">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+          <polygon points="5,3 19,12 5,21" />
+        </svg>
+      </div>
+      <p className="text-white/70 text-xs font-medium tracking-wide">Click to play</p>
+      <p className="text-white/40 text-[11px] mt-1">{title}</p>
+    </div>
+  )
+}
+
 function EmbedBlock({ project, embedHeight }) {
-  const { embed, embedType, link, title } = project
+  const { embed, embedType, link, title, clickToPlay } = project
+  const [playing, setPlaying] = useState(false)
 
   if (embedType === 'scorm') {
     return (
@@ -123,18 +143,22 @@ function EmbedBlock({ project, embedHeight }) {
     return (
       <div className="mb-5">
         <div
-          className="overflow-hidden rounded-2xl border border-neutral-200 bg-white"
+          className="overflow-hidden rounded-2xl border border-neutral-200"
           style={{ height: `${embedHeight}px` }}
         >
-          <iframe
-            src={embed}
-            width="100%"
-            height="100%"
-            allow="fullscreen"
-            allowFullScreen
-            title={title}
-            style={{ border: 'none', display: 'block' }}
-          />
+          {clickToPlay && !playing ? (
+            <ClickToPlayOverlay title={title} onPlay={() => setPlaying(true)} />
+          ) : (
+            <iframe
+              src={embed}
+              width="100%"
+              height="100%"
+              allow="fullscreen"
+              allowFullScreen
+              title={title}
+              style={{ border: 'none', display: 'block' }}
+            />
+          )}
         </div>
         <a
           href={link}
@@ -197,7 +221,6 @@ export default function ProjectCard({ project, index = 0, embedHeight = 360 }) {
           </div>
         </div>
       )}
-
 
       <div className="text-xs text-neutral-400 border-t border-neutral-200 pt-4 flex items-center justify-between">
         <span>Tools: {project.tools}</span>
