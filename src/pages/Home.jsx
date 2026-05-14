@@ -73,8 +73,7 @@ export default function Home() {
             <span className="text-neutral-400">Agustine</span>
           </h1>
           <p className="mt-8 text-neutral-500 text-base md:text-lg max-w-xl leading-relaxed mx-auto">
-            Educational Technology graduate focused on training development,
-            instructional media, and creative digital experiences.
+            Instructional designer and e-learning content developer with experience in creating interactive learning media, digital training materials, and creative educational experiences.
           </p>
           <div className="mt-10 flex gap-3 flex-wrap justify-center">
             <a
