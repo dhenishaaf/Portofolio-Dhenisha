@@ -4,10 +4,9 @@ import ProjectCard from '../components/ProjectCard'
 import { categories, getFeaturedProjects } from '../data/projects'
 
 const categoryNumbers = {
-  course: '01',
+  'interactive-media': '01',
   'learning-module': '02',
-  'interactive-media': '03',
-  'learning-video': '04',
+  'learning-video': '03',
 }
 
 const skills = [
@@ -22,6 +21,7 @@ const skills = [
   '3D AR Content',
   'SCORM Development',
   'Creative Content',
+  'AI Content Generation',
 ]
 
 const workExperience = [
@@ -118,14 +118,19 @@ export default function Home() {
           </FadeIn>
           <FadeIn delay={0.15}>
             <p className="text-neutral-500 leading-relaxed text-base mt-2">
-              Experienced in educational content development, e-learning, multimedia production, and social media creative projects across various digital platforms. Skilled in developing interactive learning media, curriculum-based educational content, and engaging digital learning experiences that support effective knowledge delivery and learner engagement.
+              Instructional designer with 3+ years of experience in educational content development, e-learning, multimedia production, and social media creative projects across various digital platforms. Skilled in developing interactive learning media, curriculum-based educational content, and engaging digital learning experiences that support effective knowledge delivery and learner engagement.
             </p>
             <p className="text-neutral-500 leading-relaxed text-base mt-4">
               Certified by BNSP in "Develop Learning Media," with strong expertise in
               instructional design, curriculum-based learning development, and interactive
               digital media.
             </p>
-            <div className="mt-8 flex gap-6">
+            <div className="mt-8 flex flex-wrap gap-y-5 gap-x-6">
+              <div>
+                <p className="text-2xl font-semibold text-neutral-900">3+</p>
+                <p className="text-xs text-neutral-400 mt-0.5">Years Experience</p>
+              </div>
+              <div className="w-px bg-neutral-200" />
               <div>
                 <p className="text-2xl font-semibold text-neutral-900">3.77</p>
                 <p className="text-xs text-neutral-400 mt-0.5">GPA / 4.00</p>
@@ -154,7 +159,7 @@ export default function Home() {
               Featured Projects
             </h2>
             <p className="text-neutral-400 text-sm max-w-xl mb-20 leading-relaxed">
-              Four areas of work — each with a live preview of a featured project. Click any category to see all projects.
+              Three areas of work — each with a live preview of a featured project. Click any category to see all projects.
             </p>
           </FadeIn>
 
@@ -183,12 +188,20 @@ export default function Home() {
                     {/* Featured cards — 1 or 2 side by side */}
                     <div className={featured.length > 1 ? 'grid md:grid-cols-2 gap-5' : ''}>
                       {featured.map((p, i) => (
-                        <ProjectCard
+                        <div
                           key={p.id}
-                          project={p}
-                          index={catIdx * 2 + i}
-                          embedHeight={featured.length > 1 ? 300 : 380}
-                        />
+                          className={
+                            featured.length % 2 === 1 && featured.length > 1 && i === featured.length - 1
+                              ? 'md:col-span-2'
+                              : ''
+                          }
+                        >
+                          <ProjectCard
+                            project={p}
+                            index={catIdx * 2 + i}
+                            embedHeight={featured.length > 1 ? 300 : 380}
+                          />
+                        </div>
                       ))}
                     </div>
                   </div>

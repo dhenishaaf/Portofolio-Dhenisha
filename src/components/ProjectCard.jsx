@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useInView } from './FadeIn'
+import { getSubCategoryLabel } from '../data/projects'
 
 const ASSEMBLR_ALLOW =
   'camera; microphone; gyroscope; accelerometer; magnetometer; xr-spatial-tracking; fullscreen'
@@ -36,9 +37,38 @@ function ClickToPlayOverlay({ title, thumbnail, onPlay, dark = false }) {
 }
 
 function EmbedBlock({ project, embedHeight }) {
-  const { embed, embedType, link, title, clickToPlay, thumbnail, portrait, customEmbedHeight } = project
+  const { embed, embeds, embedType, link, title, clickToPlay, thumbnail, portrait, customEmbedHeight } = project
   const [playing, setPlaying] = useState(false)
   const height = customEmbedHeight || embedHeight
+
+  // Several videos inside one project card (e.g. tutorials, AI-generated videos)
+  if (embeds) {
+    return (
+      <div className="mb-6 grid md:grid-cols-2 gap-4">
+        {embeds.map((video, i) => (
+          <figure key={video.embed} className="m-0">
+            <div
+              className="rounded-2xl overflow-hidden border border-neutral-200 bg-black"
+              style={{ aspectRatio: '16/9' }}
+            >
+              <iframe
+                src={video.embed}
+                width="100%"
+                height="100%"
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowFullScreen
+                title={video.title || `${title} ${i + 1}`}
+                style={{ border: 'none', display: 'block' }}
+              />
+            </div>
+            {video.title && (
+              <figcaption className="mt-2 text-xs text-neutral-500 leading-snug">{video.title}</figcaption>
+            )}
+          </figure>
+        ))}
+      </div>
+    )
+  }
 
   if (embedType === 'scorm') {
     return (
@@ -204,7 +234,8 @@ export default function ProjectCard({ project, index = 0, embedHeight = 360 }) {
   const isScorm = project.embedType === 'scorm'
   const isAssemblr3d = project.embedType === 'assemblr-3d'
   const isInteractive = project.embedType === 'interactive'
-  const isNonClickable = isScorm || isAssemblr3d || isInteractive || project.link === '#'
+  const isMultiVideo = Boolean(project.embeds)
+  const isNonClickable = isScorm || isAssemblr3d || isInteractive || isMultiVideo || project.link === '#'
 
   const cardStyle = {
     opacity: inView ? 1 : 0,
@@ -214,7 +245,7 @@ export default function ProjectCard({ project, index = 0, embedHeight = 360 }) {
   }
 
   const subcatLabel = project.subcategory
-    ? project.subcategory.replace(/-/g, ' ')
+    ? getSubCategoryLabel(project.category, project.subcategory) || project.subcategory.replace(/-/g, ' ')
     : null
 
   const inner = (
@@ -232,11 +263,11 @@ export default function ProjectCard({ project, index = 0, embedHeight = 360 }) {
         {project.desc}
       </p>
 
-      {project.embed && (
+      {(project.embed || project.embeds) && (
         <EmbedBlock project={project} embedHeight={embedHeight} />
       )}
 
-      {!project.embed && project.previewLabel && (
+      {!project.embed && !project.embeds && project.previewLabel && (
         <div className="mb-6">
           <div className="w-full rounded-2xl border border-neutral-200 bg-white p-5 text-center">
             <p className="text-neutral-700 font-medium mb-1 text-sm">{project.previewLabel}</p>

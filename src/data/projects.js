@@ -1,11 +1,11 @@
 export const categories = [
   {
-    id: 'course',
-    label: 'Course',
-    slug: 'course',
-    tagline: 'SCORM & interactive e-learning modules',
+    id: 'interactive-media',
+    label: 'Interactive Media',
+    slug: 'interactive-media',
+    tagline: 'SCORM courses, e-learning & 3D experiences',
     description:
-      'Fully packaged SCORM and interactive course modules built for LMS delivery, combining instructional design with interactive learning sequences.',
+      'Interactive e-learning built for LMS delivery, plus game-based, multimedia, and 3D learning experiences that engage learners through interactivity, animation, and immersive storytelling.',
   },
   {
     id: 'learning-module',
@@ -14,14 +14,6 @@ export const categories = [
     tagline: 'Structured training & educator materials',
     description:
       'Teacher-facing and learner-facing training modules designed around curriculum objectives and professional development goals.',
-  },
-  {
-    id: 'interactive-media',
-    label: 'Interactive Media',
-    slug: 'interactive-media',
-    tagline: 'Gamified & multimedia learning experiences',
-    description:
-      'Game-based and multimedia learning experiences that engage learners through interactivity, animations, and immersive storytelling.',
   },
   {
     id: 'learning-video',
@@ -35,30 +27,19 @@ export const categories = [
 
 export const subCategoryConfig = {
   'interactive-media': [
-    { id: 'game', label: 'Interactive Game', singleColumn: true },
+    { id: 'interactive-elearning', label: 'E-Learning', singleColumn: true },
     { id: '3d-simulation', label: '3D Simulation' },
   ],
   'learning-video': [
+    { id: 'ai-generated-video', label: 'AI-Generated Video' },
     { id: 'animation', label: 'Animation' },
     { id: 'teacher-explainer', label: 'Teacher Explainer' },
+    { id: 'tutorials', label: 'Tutorials' },
     { id: 'podcast', label: 'Podcast Learning Video' },
   ],
 }
 
 export const allProjects = [
-
-  // ── Course ──────────────────────────────────────────────────────────────────
-  {
-    id: 'scorm-lms',
-    category: 'course',
-    title: 'SCORM File for LMS',
-    desc: 'Developed SCORM 1.2/2004 interactive learning modules for Samsung Singapore using Chameleon Creator V2 with LMS integration and learner tracking.',
-    tools: 'Chameleon Creator V2',
-    link: '/scorm-launch.html',
-    embed: '/scorm-launch.html',
-    embedType: 'scorm',
-    featured: true,
-  },
 
   // ── Learning Module ──────────────────────────────────────────────────────────
   {
@@ -86,7 +67,7 @@ export const allProjects = [
   {
     id: 'pjok-module',
     category: 'learning-module',
-    title: 'Pendidikan Jasmani dan Olahraga',
+    title: 'Physical Education and Sports',
     desc: 'Organized learning materials to ensure clarity and structure. Designed and adjusted the layout to enhance readability and engagement. Aligned materials with learning objectives to ensure consistency and educational effectiveness.',
     tools: 'Microsoft Word',
     link: 'https://drive.google.com/file/d/1dpmoBx4-gQ_81ZVdxK9j4-HnJbHfvuo_/view?usp=sharing',
@@ -101,29 +82,29 @@ export const allProjects = [
     title: 'Assemblr EDU Module',
     desc: 'Developed a structured learning module for Assemblr EDU, integrating interactive 3D augmented reality content to support student engagement and curriculum alignment.',
     tools: 'Assemblr Studio & Microsoft Word',
-    link: 'https://drive.google.com/file/d/1zQOgTSJHYRSeNeuy1J2HgXneXzRbu1G5/view?usp=sharing',
-    embed: 'https://drive.google.com/file/d/1zQOgTSJHYRSeNeuy1J2HgXneXzRbu1G5/preview',
-    embedType: 'document',
-    customEmbedHeight: 620,
-    featured: false,
-  },
-  {
-    id: 'assemblr-edu-module',
-    category: 'learning-module',
-    title: 'Assemblr Edu',
-    desc: 'Organized learning materials according to the learning objectives to ensure alignment with educational goals. Created interactive 3D media as supporting materials to enhance the learning experience. Developed Student Worksheets to reinforce key concepts and facilitate active learning.',
-    tools: 'Canva & Assemblr Studio',
-    link: 'https://www.canva.com/design/DAGXiRytfKU/CWJAr5uLHzLqFoB4IfZHXw/view',
-    embed: 'https://www.canva.com/design/DAGXiRytfKU/CWJAr5uLHzLqFoB4IfZHXw/view?embed',
+    link: 'https://www.canva.com/design/DAHamcng5ow/7R9LJUL064FCzWuiOjJmjA/view',
+    embed: 'https://www.canva.com/design/DAHamcng5ow/7R9LJUL064FCzWuiOjJmjA/view?embed',
     embedType: 'slides',
     featured: false,
   },
 
-  // ── Interactive Media — Game ──────────────────────────────────────────────────
+  // ── Interactive Media — E-Learning ───────────────────────────────────────────
+  {
+    id: 'scorm-lms',
+    category: 'interactive-media',
+    subcategory: 'interactive-elearning',
+    title: 'Samsung Singapore Courses',
+    desc: 'Developed 12 interactive SCORM-based learning courses for Samsung Singapore, featuring structured learning content, interactive activities, and LMS integration to support digital learning delivery.',
+    tools: 'Chameleon Creator V2',
+    link: '/scorm-launch.html',
+    embed: '/scorm-launch.html',
+    embedType: 'scorm',
+    featured: true,
+  },
   {
     id: 'naruna',
     category: 'interactive-media',
-    subcategory: 'game',
+    subcategory: 'interactive-elearning',
     title: 'Interactive Media — Naruna',
     desc: 'Designed gamified Japanese language learning media using Construct 2 with multimedia assets, custom animations, and interactive gameplay mechanics. Features vocabulary building, hiragana recognition, and cultural exploration through game-based learning.',
     tools: 'Construct 2',
@@ -137,8 +118,8 @@ export const allProjects = [
   {
     id: 'berprograma',
     category: 'interactive-media',
-    subcategory: 'game',
-    title: 'Senam Lantai (Floor Gymnastics)',
+    subcategory: 'interactive-elearning',
+    title: 'Floor Gymnastics',
     desc: 'Developed drill-and-practice interactive learning content for floor gymnastics using Articulate Storyline, aligned with Physical Education curriculum objectives. Includes step-by-step movement guides, video demonstrations, and formative assessments.',
     tools: 'Articulate Storyline',
     link: '/berprograma-launch.html',
@@ -152,7 +133,7 @@ export const allProjects = [
     id: 'sel-hewan',
     category: 'interactive-media',
     subcategory: '3d-simulation',
-    title: 'Sel Hewan dan Tumbuhan',
+    title: 'Animal and Plant Cells',
     desc: 'Interactive 3D simulation comparing animal and plant cell structures for biology education. Learners can rotate, zoom, and explore labeled cell components in augmented reality.',
     tools: 'Assemblr Studio',
     link: 'https://app-edu.assemblrworld.com/edukits/706',
@@ -176,7 +157,7 @@ export const allProjects = [
     id: 'budaya-sunda',
     category: 'interactive-media',
     subcategory: '3d-simulation',
-    title: 'Budaya Sunda',
+    title: 'Sundanese Culture',
     desc: 'Immersive 3D learning media presenting Sundanese cultural heritage through interactive AR elements.',
     tools: 'Assemblr Studio',
     link: 'https://app-edu.assemblrworld.com/edukits/691',
@@ -188,7 +169,7 @@ export const allProjects = [
     id: 'perbandingan-berat',
     category: 'interactive-media',
     subcategory: '3d-simulation',
-    title: 'Perbandingan Berat',
+    title: 'Weight Comparison',
     desc: 'Gamified simulation helping learners understand weight comparison through interactive 3D objects.',
     tools: 'Assemblr Studio',
     link: 'https://app-edu.assemblrworld.com/edukits/755',
@@ -200,7 +181,7 @@ export const allProjects = [
     id: 'pengelasan-smaw',
     category: 'interactive-media',
     subcategory: '3d-simulation',
-    title: 'Pengelasan SMAW',
+    title: 'SMAW Welding',
     desc: 'Vocational 3D simulation of SMAW (Shielded Metal Arc Welding) techniques for technical education.',
     tools: 'Assemblr Studio',
     link: 'https://app-edu.assemblrworld.com/edukits/786',
@@ -209,14 +190,14 @@ export const allProjects = [
     featured: false,
   },
   {
-    id: 'sambungan-las',
+    id: 'elephant-war',
     category: 'interactive-media',
     subcategory: '3d-simulation',
-    title: 'Jenis Sambungan Las',
-    desc: 'Interactive 3D reference for types of welding joints, supporting vocational engineering learners.',
+    title: 'The Elephant War',
+    desc: 'An immersive 3D storytelling experience bringing the legendary Elephant War to life through interactive visual scenes, recreating key moments of the historical narrative to support engaging and memorable learning experiences.',
     tools: 'Assemblr Studio',
-    link: 'https://app-edu.assemblrworld.com/edukits/785',
-    embed: 'https://viewer-edu.assemblrworld.com/Embed/-ksLUd2eK7nPtG5oo5Qw',
+    link: 'https://viewer-edu.assemblrworld.com/Embed/-EKsujHxn6fV3J8j8yqw',
+    embed: 'https://viewer-edu.assemblrworld.com/Embed/-EKsujHxn6fV3J8j8yqw',
     embedType: 'assemblr-3d',
     featured: false,
   },
@@ -267,7 +248,7 @@ export const allProjects = [
     id: 'animal-reproduction',
     category: 'learning-video',
     subcategory: 'teacher-explainer',
-    title: 'Perkembangbiakan Hewan',
+    title: 'Animal Reproduction',
     desc: 'Educational explainer video covering animal reproduction concepts, designed to support biology teachers and students with clear visual explanations.',
     tools: 'Adobe Premiere Pro & After Effects',
     link: 'https://drive.google.com/file/d/1YjA4hoguWSDsiK2D4O27wp3UvExlK4A9/view?usp=drive_link',
@@ -315,11 +296,11 @@ export const allProjects = [
     id: 'belajar-riset',
     category: 'learning-video',
     subcategory: 'teacher-explainer',
-    title: 'Belajar Riset',
+    title: 'Learning Research',
     desc: 'Educational explainer video introducing research methodology concepts to students, designed to guide learners through the process of conducting academic research in a clear and engaging way.',
     tools: 'Adobe Premiere Pro & After Effects',
-    link: 'https://drive.google.com/file/d/1PHSC_dvxPWL6pJ1EXDHtN-H-t1Pf5NBy/view?usp=sharing',
-    embed: 'https://drive.google.com/file/d/1PHSC_dvxPWL6pJ1EXDHtN-H-t1Pf5NBy/preview',
+    link: 'https://drive.google.com/file/d/1Ieu5FltjI6RFN68zxZwpAz2Cc7mj2sig/view?usp=sharing',
+    embed: 'https://drive.google.com/file/d/1Ieu5FltjI6RFN68zxZwpAz2Cc7mj2sig/preview',
     embedType: 'video',
     portrait: true,
     customEmbedHeight: 500,
@@ -353,6 +334,42 @@ export const allProjects = [
     thumbnail: 'https://img.youtube.com/vi/LAvDhpVbxAk/maxresdefault.jpg',
     featured: false,
   },
+
+  // ── Learning Video — Tutorials ────────────────────────────────────────────────
+  {
+    id: 'assemblr-editor-tutorial',
+    category: 'learning-video',
+    subcategory: 'tutorials',
+    title: 'Assemblr Edu Editor Tutorial',
+    desc: 'Tutorial video introducing the Assemblr Edu Editor, guiding users through its features and tools to create, customize, and develop interactive 3D and AR learning experiences.',
+    tools: 'CapCut',
+    embeds: [
+      {
+        title: 'Using the Execute Block to Reuse Action',
+        embed: 'https://www.youtube.com/embed/xijYao_n_Tg',
+      },
+      {
+        title: 'Creating Camera Movement with the Animation Frame',
+        embed: 'https://www.youtube.com/embed/UFBwz0Y7qy8',
+      },
+    ],
+    featured: false,
+  },
+
+  // ── Learning Video — AI-Generated Video ───────────────────────────────────────
+  {
+    id: 'ai-generated-video',
+    category: 'learning-video',
+    subcategory: 'ai-generated-video',
+    title: 'AI-Generated Video',
+    desc: 'Created end-to-end AI-generated videos, from initial concept development and scriptwriting to final video production, using AI-driven workflows without manual video editing.',
+    tools: 'Claude',
+    embeds: [
+      { embed: 'https://drive.google.com/file/d/1Uy1b7mMkd8Iyt0s47a-K0nCV6tc-nXcf/preview' },
+      { embed: 'https://drive.google.com/file/d/1BhJLDA-_m4dTA_FZ2LZUol0YL5uBJbtA/preview' },
+    ],
+    featured: false,
+  },
 ]
 
 export function getFeaturedProjects(categoryId) {
@@ -374,4 +391,9 @@ export function getCategoryBySlug(slug) {
 
 export function getSubCategories(categoryId) {
   return subCategoryConfig[categoryId] || []
+}
+
+export function getSubCategoryLabel(categoryId, subId) {
+  const sub = (subCategoryConfig[categoryId] || []).find((x) => x.id === subId)
+  return sub ? sub.label : null
 }

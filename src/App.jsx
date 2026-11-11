@@ -1,4 +1,4 @@
-import { Route, Switch } from 'wouter'
+import { Redirect, Route, Switch } from 'wouter'
 import './index.css'
 import Navbar from './components/Navbar'
 import Home from './pages/Home'
@@ -10,6 +10,9 @@ export default function App() {
       <Navbar />
       <Switch>
         <Route path="/" component={Home} />
+        <Route path="/projects/course">
+          <Redirect to="/projects/interactive-media" />
+        </Route>
         <Route path="/projects/:slug" component={ProjectsPage} />
         <Route>
           <div className="min-h-screen bg-[#f7f5f2] flex flex-col items-center justify-center gap-4">
