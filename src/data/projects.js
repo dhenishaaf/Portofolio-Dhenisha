@@ -82,9 +82,10 @@ export const allProjects = [
     title: 'Assemblr EDU Module',
     desc: 'Developed a structured learning module for Assemblr EDU, integrating interactive 3D augmented reality content to support student engagement and curriculum alignment.',
     tools: 'Assemblr Studio & Microsoft Word',
-    link: 'https://www.canva.com/design/DAHamcng5ow/7R9LJUL064FCzWuiOjJmjA/view',
-    embed: 'https://www.canva.com/design/DAHamcng5ow/7R9LJUL064FCzWuiOjJmjA/view?embed',
-    embedType: 'slides',
+    link: 'https://drive.google.com/file/d/1P7GRrFDAVunRBwPjHqI5tNattiJpCZNC/view?usp=sharing',
+    embed: 'https://drive.google.com/file/d/1P7GRrFDAVunRBwPjHqI5tNattiJpCZNC/preview',
+    embedType: 'document',
+    customEmbedHeight: 620,
     featured: false,
   },
 

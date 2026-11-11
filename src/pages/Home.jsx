@@ -187,22 +187,19 @@ export default function Home() {
 
                     {/* Featured cards — 1 or 2 side by side */}
                     <div className={featured.length > 1 ? 'grid md:grid-cols-2 gap-5' : ''}>
-                      {featured.map((p, i) => (
-                        <div
-                          key={p.id}
-                          className={
-                            featured.length % 2 === 1 && featured.length > 1 && i === featured.length - 1
-                              ? 'md:col-span-2'
-                              : ''
-                          }
-                        >
-                          <ProjectCard
-                            project={p}
-                            index={catIdx * 2 + i}
-                            embedHeight={featured.length > 1 ? 300 : 380}
-                          />
-                        </div>
-                      ))}
+                      {featured.map((p, i) => {
+                        // With an odd number of featured cards, the first one is shown large (full width)
+                        const isHero = featured.length > 1 && featured.length % 2 === 1 && i === 0
+                        return (
+                          <div key={p.id} className={isHero ? 'md:col-span-2' : ''}>
+                            <ProjectCard
+                              project={p}
+                              index={catIdx * 2 + i}
+                              embedHeight={isHero ? 440 : featured.length > 1 ? 300 : 380}
+                            />
+                          </div>
+                        )
+                      })}
                     </div>
                   </div>
                 </FadeIn>
